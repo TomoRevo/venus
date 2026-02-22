@@ -491,7 +491,7 @@ document.querySelector('#app').innerHTML = `
       </div>
 
         <div class="step-arrow fade-in">
-          <p class="arrow-simple-text">さらに顔ヨガ講師として活躍したい方は、<br>STAGE1修了後にSTAGE2へお進みいただけます。<br><br>▼</p>
+          <p class="arrow-simple-text">自分が綺麗になった経験とスキルを使って<br>自分らしい働き方を確立したい方へ<br>トータルサポートプランもご用意しています。<br><br>▼</p>
         </div>
 
        <!-- =========================
