@@ -704,12 +704,11 @@ document.querySelector('#app').innerHTML = `
             </div>
 
  <div class="lesson-item">
-  <span class="lesson-number">カリキュラム内容</span>
+ <span class="lesson-number">カリキュラム内容</span>
 
   <div class="lesson-title">
     <div class="support-phase-wrap">
 
-      <!-- PHASE 1 -->
       <section class="support-phase phase-1">
         <div class="support-phase-head">
           <div class="phase-badge">１ヶ月目</div>
@@ -731,7 +730,6 @@ document.querySelector('#app').innerHTML = `
         <div class="levelup-arrow">▼</div>
       </div>
 
-      <!-- PHASE 2 -->
       <section class="support-phase phase-2">
         <div class="support-phase-head">
           <div class="phase-badge">２〜４ヶ月目</div>
@@ -746,41 +744,36 @@ document.querySelector('#app').innerHTML = `
           <li>行動確認</li>
           <li>修正サポート</li>
         </ul>
-
-       
       </section>
       
     </div>
-     <p class="support-note">
-          ※開講日程はSTAGE1の終盤に確定します。
-        </p>
-  </div>
-
-  <div class="premium-closing">
+    <p class="support-note">
+      ※開講日程はSTAGE1の終盤に確定します。
+    </p>
+  </div> </div> <div class="premium-closing">
   <p class="closing-main">
     この4ヶ月は、<br>
     本気で自分と向き合うと決めた方のための時間です。
   </p>
-
   <p class="closing-sub">
     “いつか変わりたい”ではなく、<br>
     “今、変わる”と決めたあなたへ。
   </p>
 </div>
 
-   <div class="course-price-box">
-            <div class="price-highlight">
-              <span class="price-label">受講料</span>
-              <span class="price-amount">350,000<span class="price-unit">円</span></span>
-              <span class="price-tax">（税込）</span>
-            </div>
-          </div>
+<div class="course-price-box">
+  <div class="price-highlight">
+    <span class="price-label">受講料</span>
+    <span class="price-amount">350,000<span class="price-unit">円</span></span>
+    <span class="price-tax">（税込）</span>
+  </div>
+</div>
 
-          <p class="elite-consult-text">
+<p class="elite-consult-text">
   プレミアムクラスにご興味がある方は、まずは個別相談へご案内いたします。
 </p>
 
-              <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=W60alH"
+<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=W60alH"
    target="_blank"
    class="cta-button cta-button--consult">
   個別相談はこちら ▶︎
