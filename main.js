@@ -11,37 +11,7 @@ document.querySelector('#app').innerHTML = `
 </div>
 
 
-      <!-- サムネイル -->
-<div class="hero-video-thumbnail" id="videoThumbnail">
-  <img src="./img/VSLサムネ.png" alt="動画サムネイル" class="video-thumbnail-img">
-  <div class="play-button">
-    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-      <circle cx="40" cy="40" r="40" fill="rgba(255, 255, 255, 0.9)"/>
-      <path d="M32 25L55 40L32 55V25Z" fill="#8B6F47"/>
-    </svg>
-  </div>
-</div>
-
-<!-- モーダル -->
-<div class="video-modal" id="videoModal">
-  <div class="video-modal-overlay" id="videoModalOverlay"></div>
-  <div class="video-modal-content">
-    <button class="video-modal-close" id="videoModalClose">×</button>
-
-    <!-- ここがYouTube -->
-    <div class="modal-youtube-wrapper">
-      <iframe
-        id="youtubePlayer"
-        src=""
-        title="YouTube video player"
-        frameborder="0"
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-  </div>
-</div>
+     
 
 <a href="#curriculum"
    target="_blank"
@@ -134,7 +104,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </div>
   </section>
-s
+
   <section id="testimonials" class="section testimonials">
     <div class="container">
       <h2 class="section-title">受講生の声</h2>
@@ -177,6 +147,30 @@ s
           </div>
         </div>
       </div>
+
+      <!-- インタビュー動画ブロック -->
+<div class="testimonial-video-wrapper fade-in">
+
+  <div class="testimonial-video-head">
+    <h3 class="testimonial-video-title">
+      ＼ 受講生インタビューも公開中!! ／
+    </h3>
+  </div>
+
+  <div class="testimonial-video-box">
+
+    <iframe
+      src="https://www.youtube.com/embed/la4GLwvaypE"
+      title="受講生インタビュー動画"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</div>
+
                         <a href="#curriculum"
    target="_blank"
    class="cta-button">
@@ -747,7 +741,7 @@ s
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-logo">マインドアップ美顔ヨガ講座 顔labo</div>
+      <div class="footer-logo">愛されヴィーナス塾</div>
       
       <div class="footer-links">
         <a href="#about">顔ヨガとは</a>
@@ -756,7 +750,7 @@ s
         <a href="#faq">よくある質問</a>
       </div>
       <div class="footer-copyright">
-        © 2025 顔labo. All rights reserved.
+        © 2026 愛されヴィーナス塾 All rights reserved.
       </div>
     </div>
   </footer>
