@@ -160,7 +160,7 @@ document.querySelector('#app').innerHTML = `
   <div class="testimonial-video-box">
 
     <iframe
-      src="https://www.youtube.com/embed/la4GLwvaypE"
+      src="https://www.youtube.com/embed/s67BEJsQ4gk?si=6v4Ihrz_I1QGWVIC"
       title="受講生インタビュー動画"
       frameborder="0"
       allow="autoplay; encrypted-media; picture-in-picture"
@@ -618,7 +618,7 @@ document.querySelector('#app').innerHTML = `
 
 
 
-    <a href="https://form.lmes.jp/landing-qr/2001999955-dv0AAknx?uLand=zbIZmA"
+    <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
       target="_blank"
       class="cta-button"
       onclick="gtag('event', 'cta_click', {
@@ -727,7 +727,7 @@ document.querySelector('#app').innerHTML = `
           自分らしく生きられる。<br><br>
           そんな人生を、一緒に歩みませんか？
         </p>
-        <a href="https://form.lmes.jp/landing-qr/2001999955-dv0AAknx?uLand=zbIZmA"
+        <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
    target="_blank"
    class="cta-button"
    onclick="gtag('event', 'cta_click', {
