@@ -391,14 +391,11 @@ document.querySelector('#app').innerHTML = `
 
   <div class="testimonial-video-box">
 
-    <iframe
-      src="https://www.youtube.com/embed/la4GLwvaypE?si=xmljxghwwc2pOvc_"
-      title="受講生インタビュー動画"
-      frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-
+  <div class="youtube-thumb" data-video-id="la4GLwvaypE" aria-label="受講生インタビュー動画を再生">
+  <img src="./img/受講生インタビュー.png" alt="受講生インタビュー動画 サムネイル">
+  <span class="youtube-play" aria-hidden="true">▶</span>
+</div>
+    
   </div>
 
 </div>
@@ -1170,40 +1167,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ===== YouTube モーダル用 =====
-// ===== YouTube モーダル用 =====
-const videoThumbnail = document.getElementById('videoThumbnail');
-const videoModal = document.getElementById('videoModal');
-const videoModalOverlay = document.getElementById('videoModalOverlay');
-const videoModalClose = document.getElementById('videoModalClose');
-const youtubePlayer = document.getElementById('youtubePlayer');
+document.addEventListener('click', (e) => {
+  const wrap = e.target.closest('.youtube-thumb');
+  if(!wrap) return;
 
-const YOUTUBE_VIDEO_ID = "la4GLwvaypE";
-
-// 要素が見つからない時は何もしない（JS停止を防ぐ）
-if (!videoThumbnail || !videoModal || !videoModalOverlay || !videoModalClose || !youtubePlayer) {
-  console.warn("YouTube modal elements not found");
-} else {
-  function openVideoModal() {
-    youtubePlayer.src =
-      `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`;
-    videoModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeVideoModal() {
-    videoModal.style.display = 'none';
-    youtubePlayer.src = ""; // 停止
-    document.body.style.overflow = '';
-  }
-
-  videoThumbnail.addEventListener('click', openVideoModal);
-  videoModalOverlay.addEventListener('click', closeVideoModal);
-  videoModalClose.addEventListener('click', closeVideoModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && videoModal.style.display === 'flex') {
-      closeVideoModal();
-    }
-  });
-}
+  const id = wrap.dataset.videoId;
+  wrap.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0"
+      title="受講生インタビュー動画"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+      style="width:100%;height:100%;display:block;border:0;"
+    ></iframe>
+  `;
+});
