@@ -809,7 +809,7 @@ document.querySelector('#app').innerHTML = `
         <h3 class="course-main-title course-main-title-elite">愛されヴィーナス エリートクラス</h3>
         <!-- イメージ（エリート導入） -->
 <div class="elite-hero-visual">
-  <img src="img/ヴィーナス集合2.jpg" alt="愛されヴィーナス エリートクラス イメージ" />
+  <img src="img/venus2.jpg" alt="愛されヴィーナス エリートクラス イメージ" />
 </div>
         <p class="course-period course-period-elite">6ヶ月間で自分らしい働き方を確立</p>
         <p class="course-req">※プレミアムクラス修了者対象</p>
