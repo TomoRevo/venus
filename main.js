@@ -219,7 +219,7 @@ document.querySelector('#app').innerHTML = `
     <h2 class="section-title">カリキュラム</h2>
 
     <p class="curriculum-lead-clean">
-      3つのステージで基礎から応用まで徹底サポート
+      3つのステージで<br>基礎から応用まで徹底サポート
     </p>
 
     <div class="curriculum-path">
@@ -238,7 +238,8 @@ document.querySelector('#app').innerHTML = `
 
           <div class="course-description-box">
             <p>
-              まずは顔ヨガの基礎から体系的に学び、自分が綺麗になって自信を育みましょう。
+              この2ヶ月間は"顔を変える"だけの時間ではありません。<br>
+              外見の変化が、内側からの自信を呼び起こします♡
             </p>
           </div>
 
@@ -288,7 +289,11 @@ document.querySelector('#app').innerHTML = `
             <div class="lesson-item">
               <span class="lesson-number">形式</span>
               <span class="lesson-title">
-                グループレッスン（オンライン）
+                <ul class="curriculum-inline-list content-list">
+      <li>少人数グループ制</li>
+      <li>オンライン（全国どこでも参加可能）</li>
+      <li>実践サポート付き</li>
+    </ul>         
               </span>
             </div>
 
@@ -340,7 +345,7 @@ document.querySelector('#app').innerHTML = `
     </div>
 
       <div class="step-arrow fade-in">
-          <p class="arrow-simple-text">さらに顔ヨガ講師として活躍したい方は、<br>STAGE1修了後にSTAGE2へお進みいただけます。<br><br>▼</p>
+          <p class="arrow-simple-text">この2ヶ月間で<br>お顔が変わり、自信が戻り<br>「この経験を活かしたい」と思った方には<br>次のステージをご用意しています。<br><br>▼</p>
         </div>
 
         <div class="course-step fade-in">
@@ -560,7 +565,7 @@ document.querySelector('#app').innerHTML = `
       <div class="support-phase elite-phase">
     <div class="support-phase-head">
     <div class="phase-badge phase-badge-elite">前半</div>
-    <p class="support-phase-title">設計・土台づくり（グループ）</p>
+    <p class="support-phase-title">設計・土台づくり</p>
   </div>
         <ul class="curriculum-inline-list elite-list">
           <li>グループ講座</li>

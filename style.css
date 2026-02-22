@@ -2762,21 +2762,21 @@ body {
 
 /* ベネフィットはキラキラ */
 .benefit-list li::before{
-  content: "✧";
+  content: "✓";
   color: var(--color-accent);
   font-size: 14px;
 }
 
 /* 内容はシンプルドット */
 .content-list li::before{
-  content: "●";
+  content: "✓";
   color: rgba(185,123,134,0.7);
   font-size: 10px;
   top: 6px;
 }
 
 .business-list li::before{
-  content: "▶";
+  content: "✓";
   color: var(--color-accent);
   font-size: 12px;
   top: 4px;
@@ -2861,7 +2861,6 @@ body {
 /* ===== Level Up Connector ===== */
 .support-levelup{
   position: relative;
-  padding: 6px 0 2px;
   display: grid;
   justify-items: center;
   gap: 6px;
@@ -3118,8 +3117,8 @@ body {
 ========================= */
 
 .testimonial-video-wrapper{
-  margin-top: 70px;
-  padding: 50px 40px;
+  margin-top: 10px;
+  padding: 40px 20px;
   border-radius: 28px;
   background:
     linear-gradient(135deg, rgba(250,241,242,0.8), rgba(255,255,255,0.95));
@@ -3157,7 +3156,7 @@ body {
 
 .testimonial-video-title{
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 100%;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--color-brown);
