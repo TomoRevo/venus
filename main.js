@@ -867,6 +867,19 @@ document.querySelector('#app').innerHTML = `
         </span>
       </div>
       
+      <div class="elite-message">
+  <p class="elite-message-lead">
+    このステージは、<br class="sp-only">
+    <span class="elite-message-em">“なんとなく頑張る人”</span>のためではありません。
+  </p>
+
+  <div class="elite-message-divider" aria-hidden="true"></div>
+
+  <p class="elite-message-body">
+    本気で上を目指すと決めた女性のための<br class="sp-only">
+    <span class="elite-message-strong">3名限定・育成枠</span>です。
+  </p>
+</div>
 
 
 
