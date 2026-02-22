@@ -5,8 +5,13 @@ document.querySelector('#app').innerHTML = `
       <div class="hero-brand">
         <h1 class="hero-title">愛されヴィーナス塾</h1>
       </div>
+       <div class="hero-visual">
+      <img src="img/リゾート.jpg" alt="愛されヴィーナス塾">
+    </div>
       <h2 class="hero-catchphrase">お顔を変えて<br>自分らしく働く自分に。</h2>
-      <br>
+      <p class="hero-sub">
+  一生若返るセルフ整形でキレイになった私が、 人生の主役になる。
+</p>
 
 </div>
 
@@ -24,32 +29,120 @@ document.querySelector('#app').innerHTML = `
 
   <section class="section what-is">
     <div class="container">
-      <h2 class="section-title">顔ヨガって？</h2>
-      <div class="what-is-content">
-        <p class="what-is-definition">顔ヨガとは、お顔の<span class="highlight-text">表情筋を鍛えてストレッチ</span>することです。</p>
+      <h2 class="section-title">ヴィーナス美顔ヨガとは？</h2>
 
-        <div class="what-is-description">
-          <p>顔には約<span class="highlight-number">60</span>もの表情筋があり、<br>心の状態とリンクして、さまざまな感情を表現しています。</p>
-
-          <p class="emphasis-text">でも…表情筋も筋肉。<br>使わないとどんどん衰えてしまうんです。</p>
-
-          <p>同じ筋肉ばかりを使ってしまうと、「表情ぐせ」がついて<span class="highlight-text">シワやたるみの原因</span>に。</p>
-
-          <p class="solution-text">顔ヨガでバランスよく筋肉を動かすことで、表情も気持ちも前向きに整えられます◎</p>
+<div class="what-is-content">
+ <div class="before-after-images">
+          <img src="./img/biforeAfter.jpg" alt="顔ヨガのビフォーアフター" class="before-after-image">
         </div>
-      </div>
+
+
+  <p class="what-is-definition">
+    「この写真、ほんとに自分の顔？」
+  </p>
+
+  <div class="what-is-description">
+
+    <p>
+      増えてしまったたるみやシワを見た瞬間、
+      ちょっと切なくなったことはありませんか？
+    </p>
+
+    <p class="emphasis-text">
+      年齢のせいだと諦めかけたその変化。<br>
+      実はその原因は、“筋肉の使い方”かもしれません。
+    </p>
+
+    <hr class="section-divider">
+
+    <p>
+      お顔には約<span class="highlight-number">30種類以上</span>の表情筋があります。
+    </p>
+
+    <p class="emphasis-text">
+      でも――<br>
+      ✔ いつも同じ表情ばかり<br>
+      ✔ 無意識に力が入っている<br>
+      ✔ 下を向く時間が長い
+    </p>
+
+    <p>
+      そんな毎日の積み重ねで、<br>
+      使わない筋肉は衰え、<br>
+      同じ筋肉ばかり使うことで
+      <span class="highlight-text">「表情ぐせ」や、たるみ・シワの原因</span>
+      をつくってしまうのです。
+    </p>
+
+    <hr class="section-divider">
+
+    <p class="solution-text">
+      ヴィーナス美顔ヨガは、
+    </p>
+
+    <p>
+      上半身のストレッチで巡りを整え、<br>
+      表情筋をやさしくほぐし、鍛え、
+    </p>
+
+    <p class="highlight-text">
+      本来あなたが持っている美しさを引き出すセルフ整形メソッド。
+    </p>
+
+    <p>
+      ただの顔の体操ではありません。
+    </p>
+
+    <p class="emphasis-text">
+      ✔ たるみにくい土台づくり<br>
+      ✔ 自分でメンテナンスできる力<br>
+      ✔ 鏡を見るのが楽しくなる毎日
+    </p>
+
+    <p>
+      目指すのは、
+      周りから愛されながら、
+      自分のことも愛せる女性。
+    </p>
+
+    <p class="highlight-text">
+      “一生使い続けられる美容メソッド”です。
+    </p>
+
+    <hr class="section-divider">
+
+    <p class="emphasis-text">
+      5年後、10年後。<br>
+      「何もしてこなかった未来」と<br>
+      「今、始めた未来」<br>
+      どちらの自分でいたいですか？
+    </p>
+
+    <p>
+      ヴィーナス美顔ヨガは
+      美容医療に頼らなくても、
+      自分の手で未来を育てていく方法。
+    </p>
+
+    <p class="solution-text">
+      お顔が変わると、人生の選択まで変わり始めます。
+    </p>
+
+    <p>
+      2ヶ月グループレッスンは、その“最初の扉”。<br>
+      「愛されながら選ばれる女性」への道は、ここから始まります。
+    </p>
+
+  </div>
+
+</div>
 
       <div class="before-after-content">
         <div class="before-after-header">
           <p class="before-after-title">ほんの少しの習慣でこの変化！</p>
         </div>
 
-        <div class="before-after-images">
-          <img src="./img/biforeAfter.jpg" alt="顔ヨガのビフォーアフター" class="before-after-image">
-        </div>
-
-        <p class="before-after-caption">他にもこんな変化が...</br>▼</p>
-         <div class="before-after-detail-images">
+           <div class="before-after-detail-images">
           <img src="./img/biforeAfter-detail.jpg" alt="顔ヨガのビフォーアフター" class="before-after-image">
         </div>
         </div>
@@ -78,17 +171,18 @@ document.querySelector('#app').innerHTML = `
 
         <div class="story-realization">
          <img src="./img/悩み1.png" alt="悩む女性" class="story-worry-image" />
-          かつての私も、同じでした。<br> 
-          「私には何が残っているんだろう」という不安の中で出会ったのが、「表情筋の基礎と理論」に基づいた美顔ヨガでした。 
+          かつての私も、同じでした。
+          <br><br>年齢を重ねるたびに、少しずつ自信が薄れていく感覚。
+          <br><br>
+          でも――
           <br>
-          <br>
-          お顔を自分の手で整え、鏡の中の自分を「最高に可愛い」と誇れるようになったとき、私の人生と仕事は、音を立てて新しいステージへと動き始めたのです。
-        <div class="story-highlight">
-          <p>今、私は同じように悩んでいる女性たちに「あなたも変われる」と伝えたいと思っています。</p>
+          お顔は、自分の手で変えられると知ったとき、鏡を見る時間が、楽しみに変わりました。
+          <br><br><b>「私、まだ若返れる」</b>
+          <br>その実感が、人生と仕事を動かし始めたのです。
         </div>
 
         <div class="story-reflection">
-        <p><img src="./img/S__38297608.jpg" alt="輝く未来" class="story-future-image" /></p>
+        <p><img src="./img/未来.png" alt="輝く未来" class="story-future-image" /></p>
           <p>何歳になっても女性はいつまでも輝けます。</p>
           <br>
           <p>「もう遅い」なんて、ありません。<br>むしろ、これまでの経験を重ねてきた今だからこそ、手に入れられる美しさがあるのです。</p>
@@ -104,6 +198,104 @@ document.querySelector('#app').innerHTML = `
       </div>
     </div>
   </section>
+
+  <!-- =========================
+  ヴィーナス美顔ヨガが選ばれる4つのポイント
+========================== -->
+<section id="points" class="section points fade-in">
+  <div class="container">
+    <h2 class="section-title">
+      ヴィーナス美顔ヨガが<br class="sp-only">選ばれる<span class="points-number-accent">4</span>つのポイント
+    </h2>
+
+    <div class="points-grid">
+      <!-- 1 -->
+      <article class="point-card">
+        <div class="point-badge">1</div>
+        <h3 class="point-title">お金をかけずに綺麗になれる</h3>
+
+        <p class="point-text">
+          一度覚えたら、一生自分でメンテナンスでき、
+          5年先も10年先もずっと美顔をキープし続けることができるメソッドです。
+        </p>
+
+        <p class="point-emphasis">
+          自分の手だけでできるから、機械も電源も資金も不要！
+        </p>
+
+        <p class="point-text">
+          場所を選ばず、どこでも実践することができます。
+        </p>
+
+        <!-- 画像を入れるならここ（任意） -->
+        <!-- <img class="point-illust" src="img/point1.png" alt="ポイント1"> -->
+      </article>
+
+      <!-- 2 -->
+      <article class="point-card">
+        <div class="point-badge">2</div>
+        <h3 class="point-title">あなたの悩みに合わせた<br><span class="point-title-sub">レクチャー</span></h3>
+
+        <p class="point-text">
+          他の顔ヨガ講座では、決まったポーズしか学べない所がほとんどです。
+          ですが、それだけではあなたの悩み解決まで時間がかかってしまいます。
+        </p>
+
+        <p class="point-emphasis">
+          ヴィーナス美顔ヨガでは、あなたが気になる部分に特化した応用ポーズもしっかりレクチャーしますので、変化が早いです。
+        </p>
+      </article>
+
+      <!-- 3 -->
+      <article class="point-card">
+        <div class="point-badge">3</div>
+        <h3 class="point-title">リフトアップだけでなく<br><span class="point-title-sub">首肩こりが解消</span></h3>
+
+        <p class="point-text">
+          お顔のたるみの大きな原因である、首肩こりに効果的な上半身のアプローチをしっかり行うことで、
+          慢性的な首肩こりや偏頭痛なども改善され、美しい姿勢を保ちやすくなります。
+        </p>
+
+        <p class="point-emphasis">
+          バストアップや、お腹痩せした方も！
+        </p>
+      </article>
+
+      <!-- 4 -->
+      <article class="point-card point-card-last">
+        <div class="point-badge">4</div>
+        <h3 class="point-title">愛されマインドが身につき<br>自分のことがもっと好きになる</h3>
+
+        <p class="point-text">
+          どんなに美容に気を使っていても心の状態が整ってないとお顔は変化しきれません。
+          心の状態が、表情や肌状態に影響するのはもちろん、険しい感情が表情ぐせとなり、シワやたるみを作り上げてしまいます。
+        </p>
+
+        <p class="point-text">
+          また下を向いて考える時間が増えると、下に引っ張られた表情筋は顔全体を下に引っ張る力が働いて、どんどんたるみます。
+        </p>
+
+        <p class="point-quote">
+          「自分なんて」「もう歳だし」と諦め癖がついていませんか？
+        </p>
+
+        <p class="point-emphasis">
+          『お顔と心はセット』です！
+        </p>
+
+        <p class="point-text">
+          美顔ヨガでお顔がきれいになると自然と自信もついて笑顔が増え、
+          いろんなことに挑戦できるようになったり、自分のことがもっと好きになったり、
+          自分の人生をより楽しめるようになります！
+        </p>
+
+        <p class="point-text">
+          ヴィーナス美顔ヨガで見た目も心も欲張りに綺麗になりましょう！
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
   <section id="testimonials" class="section testimonials">
     <div class="container">
@@ -131,7 +323,7 @@ document.querySelector('#app').innerHTML = `
             <div class="testimonial-highlight">
               めぐ先生の顔ヨガはなんと言っても「心もお顔も上げる」で人生の見え方が変わりました！
             </div>
-            <p class="testimonial-text">年齢を重ねる中で、表情や気持ちの変化に戸惑っていました。「顔ヨガ」と聞いて最初は表情筋の運動かと思っていたのですが、めぐさんの「心もお顔も上げていくレッスン」の考え方に惹かれて、「これはただの技術じゃなく、人生が前向きになる講座だ」と感じたのが決め手でした。<br><br>顔ヨガだけやってもお顔はちゃんと上がります。でも女性としての気持ちの持ち方を学べて、それをこれから私もたくさんの方にお伝えしていくんだと思うと、50代が楽しくなりました！！</p>
+            <p class="testimonial-text">年齢を重ねる中で、表情や気持ちの変化に戸惑っていました。「顔ヨガ」と聞いて最初は表情筋の運動かと思っていたのですが、めぐさんの「心もお顔も上げていくレッスン」の考え方に惹かれて、「これはただの技術じゃなく、人生が前向きになる講座だ」と感じたのが決め手でした。<br><br>顔ヨガだけやってもお顔はちゃんと上がります。でも女性としての気持ちの持ち方を学べて、それをこれから私もたくさんの方にお伝えしていくんだと思うと、歳を重ねるのが楽しくなりました！！</p>
           </div>
         </div>
 
@@ -141,9 +333,49 @@ document.querySelector('#app').innerHTML = `
           </div>
           <div class="testimonial-content">
             <div class="testimonial-highlight">
-              めぐ先生はベテランのエステティシャンでもあるので、マッサージのやり方やほぐし方もすごく分かりやすかったです。
+              メグさんはベテランのエステティシャンでもあるので、マッサージのやり方やほぐし方もすごく分かりやすかったです。
             </div>
-            <p class="testimonial-text">これまでエステを通して多くのお客様と接してきましたが、「もっと心の部分に寄り添えるような技術があったら」と感じることがありました。めぐさんの講座は、技術のわかりやすさだけでなく、想いや寄り添いの温度が高くて。先生自身が伝えたいことを体現してる"感じ"に惹かれて、ここで学びたいと思いました。<br><br>お肌のお手入れのやり方やスキンケアも教えていただけて、私もこれから生徒さんに色んなアプローチができるし、これから講師として活動していくために、すごく安心感があります。エステとマインドと顔ヨガ、全部学べるってすごいと思う。本当におすすめです！</p>
+            <p class="testimonial-text">不意に、ショーウィンドウに映った自分 のたるんだ顔を見てショックを受け、 「もう年齢的にもしょうがないのか
+な・」と半ば諦めていました。 <br>
+そんなとき、なんとなく見ていたインスタで、美顔ヨガの存在を知り、実践してる方のビフォーアフターに驚愕したんで
+す！ 
+<br>「これなら変われるかも！」
+<br> 「女性としてまだまだ輝きたい！」
+<br>と思い、勇気を出して挑戦しました。
+<br><br>
+3ヶ月間、コツコツ教えてもらったこと を続けてみたら、自分でもわかるくらい
+顔が激変！ 最近では10歳も若く見られることが増
+えてとっても嬉しいです！
+本当に諦めなくて良かったです。</p>
+          </div>
+        </div>
+
+      
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-image">
+            <img src="img/受講生の変化5.jpg" alt="受講生の変化5" />
+          </div>
+          <div class="testimonial-content">
+            <div class="testimonial-highlight">
+              顔が変わってみるみるうちに自分のことが大好きになれました！
+            </div>
+            <p class="testimonial-text">お顔が昔と比べて、何となく大きくなったぁ…
+って感じてました。
+<br>
+前までは似合ってた服が
+どんどん似合わなくなり
+｢服なんてもう安いのでいいや｣って
+オシャレもしなくなったんですよね。
+ <br>
+そんな時に、自分が顔ヨガ講師になってお仕事ができるんだって事を知り
+｢キレイになる事が収入に繋がるんだ！｣と思って
+恐る恐る説明会を受けました。
+<br>
+あの時一歩踏み出してなければ、夫に褒められる事も
+無かったし
+今は、オシャレもメイクも楽しくて
+愛されヴィーナス塾の皆さんと出会えて本当に良かったと思っています♪</p>
           </div>
         </div>
       </div>
@@ -192,23 +424,73 @@ document.querySelector('#app').innerHTML = `
 
         <div class="instructor-content">
           <div class="instructor-name-box instructor-name-box-mobile">
-            <h3 class="instructor-name">加藤 潤（めぐ）</h3>
-            <p class="instructor-subtitle">愛されヴィーナス塾 主宰</p>
+            <h3 class="instructor-name">加藤 潤（メグさん）</h3>
+            <p class="instructor-subtitle">SalondeFuturオーナー
+            <br>透明ほっぺケアメソッド
+            <br>ヴィーナス美顔ヨガ創始者
+            <br>厚労省認定セラピストスクール講師歴6年</p>
           </div>
 
-          <div class="instructor-bio">
-            <p class="bio-intro">元パート時給970円のエステティシャンから、今ではサロンオーナーとして多くの女性の人生に寄り添う毎日を送っています。</p>
-            <br>
-            <p class="bio-turning-point">コロナ禍で心身ともに限界を感じていた私を変えてくれたのが、他でもない「<span class="highlight-keyword">顔ヨガ</span>」でした。</p>
-            <br>
-            <p class="bio-philosophy">表情が変わると、マインドも変わり自分を大切にできるようになります。</p>
-            <br>
-            <p class="bio-results">今では、ありがたいことに<br><span class="voice-quote">「自分のことが好きになれた」</span><br><span class="voice-quote">「理想の働き方が叶った」</span><br>そんな声がたくさん届いています。</p>
-            <br>
-            <p class="bio-mission">私自身が変われたからこそ、<br><span class="mission-text">「皆さんの一歩を全力でサポートしたい」</span><br>そういった想いのもと活動しています。</p>
-            <br>
-            <p class="bio-cta">私と一緒に<br><span class="final-message">「可愛い笑顔」と「理想の未来」を手に入れましょう♡</span></p>
-          </div>
+         <div class="instructor-bio">
+
+  <p class="bio-intro">
+    こんにちは。<br>
+    ヴィーナス美顔ヨガ創始者の加藤 潤です。
+  </p>
+  <br>
+
+  <p class="bio-career">
+    現在はエステサロンでの施術と並行しながら、
+    オンラインで整形級の若返りが叶う
+    美顔ヨガ講座を主宰。
+  </p>
+  <br>
+
+  <p class="bio-results">
+    これまでに
+    <span class="highlight-keyword">2000名以上</span>のお客様を
+    美しく変貌させてきました。
+  </p>
+  <br>
+
+  <p class="bio-philosophy">
+    私自身、体調を崩し、長いマスク生活やストレスで
+    お顔のたるみに悩んだ過去があります。
+  </p>
+
+  <p>
+    「このまま老け続けるのは嫌だ」
+    そう思ったことが、美顔ヨガの研究の始まりでした。
+  </p>
+  <br>
+
+  <p class="bio-expertise">
+    表情筋×解剖学×心の関係性に着目し、
+    再現性のあるメソッドへと確立。
+  </p>
+  <br>
+
+  <p>
+    美容医療のような一時的な変化ではなく、
+    <span class="highlight-text">
+      一度身につければ一生使える美容法
+    </span>
+    をお伝えしています。
+  </p>
+  <br>
+
+  <p class="bio-mission">
+    美顔ヨガは、
+    自分の顔がもっと好きになるための美容法。
+  </p>
+
+  <p class="final-message">
+    そして、
+    愛されながら選ばれる女性になるための
+    最初の一歩です。
+  </p>
+
+</div>
         </div>
       </div>
     </div>
@@ -248,18 +530,18 @@ document.querySelector('#app').innerHTML = `
             <div class="lesson-item">
               <span class="lesson-number">STAGE1の目的</span>
               <span class="lesson-title">
-                顔ヨガを正しく学び、顔の変化と自信を体感する。
+                顔ヨガを正しく学び、「私、まだ変われる」という自信を取り戻す。
               </span>
             </div>
 
             <div class="lesson-item">
               <span class="lesson-number">こんな方におすすめ</span>
               <span class="lesson-title">
-<ul class="curriculum-inline-list">
-      <li>顔に自信を取り戻したい女性</li>
-      <li>老け見え・たるみが気になる</li>
-      <li>まずは自分を変えたい</li>
-      <li>仕事にするかはまだ未定</li>
+              <ul class="curriculum-inline-list">
+      <li>写真に写る自分にガッカリしている</li>
+      <li>ほうれい線やたるみが気になり始めた</li>
+      <li>でも美容医療には頼りたくない</li>
+      <li>もう一度、自分に自信を持ちたい</li>
     </ul>              </span>
             </div>
 
@@ -267,10 +549,10 @@ document.querySelector('#app').innerHTML = `
               <span class="lesson-number">ヴィーナス美顔ヨガの特徴</span>
               <span class="lesson-title">
                  <ul class="curriculum-inline-list benefit-list">
-      <li>正しい顔ヨガが身につく</li>
-      <li>老け見えの原因が分かる</li>
-      <li>顔の変化を実感できる</li>
-      <li>「私、まだ変われる」という感覚が戻る</li>
+      <li>たるみの原因が“構造レベル”で分かる</li>
+      <li>変化を写真で実感できる</li>
+      <li>上半身から整えるからリフト感が違う</li>
+      <li>一生使えるセルフメンテナンスが身につく</li>
     </ul>
               </span>
             </div>
@@ -340,8 +622,14 @@ document.querySelector('#app').innerHTML = `
             </div>
           </div>
 
+          <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
+      target="_blank"
+      class="cta-button">
+      お申し込みはこちら▶︎
+    </a>
         </div>
       </div>
+      
     </div>
 
       <div class="step-arrow fade-in">
@@ -356,6 +644,9 @@ document.querySelector('#app').innerHTML = `
             <div class="course-header">
               <div class="course-title-box">
                 <h3 class="course-main-title">愛されヴィーナス プレミアムクラス</h3>
+                <div class="premium-hero-visual">
+  <img src="img/リゾート2.jpg" alt="愛されヴィーナス プレミアムクラス イメージ" />
+</div>
                 <p class="course-period">4ヶ月間 / 全12回
                 <br>+ 徹底伴走サポート</p>
                 <div class="diploma-badge">
@@ -383,7 +674,9 @@ document.querySelector('#app').innerHTML = `
             <div class="lesson-item">
               <span class="lesson-number">プレミアムクラスの目的</span>
               <span class="lesson-title">
-                顔ヨガを「仕事」として成立させるためのノウハウを習得しましょう。
+               顔ヨガを「収入」ではなく
+               <br>“自分らしい働き方”に変える4ヶ月。
+               <br>自分が変わった経験を人の希望にできる女性になる。
               </span>
             </div>
 
@@ -403,12 +696,11 @@ document.querySelector('#app').innerHTML = `
               <span class="lesson-title">
                  <ul class="curriculum-inline-list benefit-list">
    <ul class="curriculum-inline-list business-list">
-  <li>発信の軸が明確になる</li>
-  <li>ペルソナ設計ができる</li>
-  <li>アカウント設計が整う</li>
-  <li>リール／投稿の型が分かる</li>
-  <li>集客の流れが理解できる</li>
-  <li>「教える側」の自信がつく</li>
+  <li>発信に迷わなくなる“軸”ができる</li>
+  <li>あなたにしかない強みが言語化できる</li>
+  <li>申込みが入る動線が完成する</li>
+  <li>一人で悩まない環境がある</li>
+  <li>「教える側」の自信が身につく</li>
 </ul>
     </ul>
               </span>
@@ -450,20 +742,6 @@ document.querySelector('#app').innerHTML = `
           <p class="support-phase-sub">実践 → 改善 → 成果へ。伸びる型を体に入れる</p>
         </div>
 
-        <!-- “伸びていく感”のゲージ -->
-        <div class="progress-rail" aria-hidden="true">
-          <div class="progress-fill"></div>
-          <div class="progress-dots">
-            <span class="dot on"></span>
-            <span class="dot on"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <div class="progress-labels">
-            <span>実践</span><span>改善</span><span>加速</span><span>定着</span>
-          </div>
-        </div>
-
         <ul class="curriculum-inline-list">
           <li>グループフォロー</li>
           <li>実践チェック</li>
@@ -480,6 +758,19 @@ document.querySelector('#app').innerHTML = `
           ※開講日程はSTAGE1の終盤に確定します。
         </p>
   </div>
+
+  <div class="premium-closing">
+  <p class="closing-main">
+    この4ヶ月は、<br>
+    本気で自分と向き合うと決めた方のための時間です。
+  </p>
+
+  <p class="closing-sub">
+    “いつか変わりたい”ではなく、<br>
+    “今、変わる”と決めたあなたへ。
+  </p>
+</div>
+
    <div class="course-price-box">
             <div class="price-highlight">
               <span class="price-label">受講料</span>
@@ -487,6 +778,16 @@ document.querySelector('#app').innerHTML = `
               <span class="price-tax">（税込）</span>
             </div>
           </div>
+
+          <p class="elite-consult-text">
+  プレミアムクラスにご興味がある方は、まずは個別相談へご案内いたします。
+</p>
+
+              <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=W60alH"
+   target="_blank"
+   class="cta-button cta-button--consult">
+  個別相談はこちら ▶︎
+</a>
 </div>
       </div>
 
@@ -502,9 +803,14 @@ document.querySelector('#app').innerHTML = `
 
   <div class="course-main-card course-main-card-elite">
 
+
     <div class="course-header">
       <div class="course-title-box">
         <h3 class="course-main-title course-main-title-elite">愛されヴィーナス エリートクラス</h3>
+        <!-- イメージ（エリート導入） -->
+<div class="elite-hero-visual">
+  <img src="img/ヴィーナス集合2.jpg" alt="愛されヴィーナス エリートクラス イメージ" />
+</div>
         <p class="course-period course-period-elite">6ヶ月間で自分らしい働き方を確立</p>
         <p class="course-req">※プレミアムクラス修了者対象</p>
       </div>
@@ -543,7 +849,7 @@ document.querySelector('#app').innerHTML = `
 
       <!-- ベネフィット -->
       <div class="lesson-item lesson-item-elite">
-        <span class="lesson-number lesson-number-elite">ベネフィット</span>
+        <span class="lesson-number lesson-number-elite">エリートクラスの特徴</span>
         <span class="lesson-title">
           <ul class="curriculum-inline-list elite-list elite-benefit-list">
             <li>集客の仕組みが安定する</li>
@@ -586,21 +892,12 @@ document.querySelector('#app').innerHTML = `
   </div>
 
         <div class="progress-rail elite-progress" aria-hidden="true">
-          <div class="progress-fill elite-progress-fill"></div>
-          <div class="progress-dots">
-            <span class="dot on"></span>
-            <span class="dot on"></span>
-            <span class="dot on"></span>
-            <span class="dot"></span>
-          </div>
-          <div class="progress-labels">
-            <span>実践</span><span>改善</span><span>安定</span><span>継続</span>
-          </div>
-        </div>
+         
 
         <ul class="curriculum-inline-list elite-list">
           <li>伴走サポート</li>
           <li>必要に応じた個別フォロー</li>
+          <li>プロのカメラマンによる撮影</li>
         </ul>
 
         <p class="support-note elite-note">
@@ -613,21 +910,105 @@ document.querySelector('#app').innerHTML = `
       </div>
 
     </div>
+    <!-- ===== Elite Closing + Price + CTA ===== -->
+<div class="elite-closing">
+  <p class="elite-closing-main">
+    これまでに<br class="sp-only">
+    <span class="elite-closing-strong">1万人超えアカウント</span>を多数輩出。<br>
+    <span class="elite-closing-strong">月商100万円超え</span>の講師も誕生しています。
+  </p>
+
+  <p class="elite-closing-sub">
+    次は、<span class="elite-closing-accent">あなたの番</span>です。
+  </p>
+</div>
+
+<div class="course-price-box course-price-box-elite">
+  <div class="price-highlight price-highlight-elite">
+    <span class="price-label">受講料</span>
+    <span class="price-amount">500,000<span class="price-unit">円</span></span>
+    <span class="price-tax">（税込）</span>
   </div>
 </div>
 
 
+       <div class="consult-box">
+  <p class="consult-lead">
+  エリートクラスは、<br>
+    本気で取り組みたい方だけをご案内しています。
+  </p>
 
-    <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
-      target="_blank"
-      class="cta-button"
-      onclick="gtag('event', 'cta_click', {
-        event_category: 'CTA',
-        event_label: 'cta_main',
-        transport_type: 'beacon'
-      });">
-      お申し込みはこちら▶︎
-    </a>
+  <p class="consult-sub">
+    まずは現在の状況や目標をお伺いする<br>
+    個別相談へお越しください。
+  </p>
+</div>
+
+<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=A1ONRz"
+  target="_blank"
+  class="cta-button cta-button-consult">
+  個別相談はこちら ▶︎
+</a>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- =========================
+  愛されヴィーナス塾 実績
+========================= -->
+<section class="section results fade-in">
+  <div class="container">
+
+    <h2 class="section-title results-title">
+      愛されヴィーナス塾 実績
+    </h2>
+
+
+<div class="results-visual">
+  <img src="./img/ヴィーナス集合.jpg" alt="愛されヴィーナス塾 実績画像">
+</div>
+
+    <p class="results-lead">
+      数字は目的ではなく、<br>
+      <span class="results-highlight">「選ばれる力」の証明</span>です。
+    </p>
+
+    <div class="results-grid">
+
+      <div class="result-item">
+        <div class="result-number">1万人</div>
+        <div class="result-text">2ヶ月でフォロワー達成</div>
+      </div>
+
+      <div class="result-item">
+        <div class="result-number">3名</div>
+        <div class="result-text">半年以内1万人超え</div>
+      </div>
+
+      <div class="result-item">
+        <div class="result-number">5名</div>
+        <div class="result-text">フォロワー1万～6万人超え</div>
+      </div>
+
+      <div class="result-item">
+        <div class="result-number">18名</div>
+        <div class="result-text">初回募集 満席</div>
+      </div>
+
+      <div class="result-item">
+        <div class="result-number">4名</div>
+        <div class="result-text">月商100万円超え</div>
+      </div>
+
+      <div class="result-item result-item-gold">
+        <div class="result-number">320万円</div>
+        <div class="result-text">最高売上</div>
+      </div>
+
+    </div>
 
   </div>
 </section>
@@ -716,7 +1097,7 @@ document.querySelector('#app').innerHTML = `
   <section class="section cta-final">
     <div class="container">
       <div class="cta-final-box">
-        <h2 class="cta-final-title">あなたの<br>「可愛くなりたい」<br>を応援します</h2>
+        <h2 class="cta-final-title">あなたの<br>「綺麗になりたい」<br>を応援します</h2>
         <p class="cta-final-text">
           これまで頑張ってきたあなただからこそ、<br>
           今度は自分を大切にする番です。<br><br>
@@ -730,11 +1111,7 @@ document.querySelector('#app').innerHTML = `
         <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
    target="_blank"
    class="cta-button"
-   onclick="gtag('event', 'cta_click', {
-     event_category: 'CTA',
-     event_label: 'cta_main',
-     transport_type: 'beacon'
-   });">
+  >
   お申し込みはこちら▶︎
 </a>
 

@@ -67,6 +67,28 @@ body {
   overflow: hidden;
 }
 
+.hero-visual{
+   width: 100%;
+  aspect-ratio: 16 / 13;
+  border-radius: 22px;
+  overflow: hidden;
+  /* 既存の背景/影はそのまま */
+  margin-bottom: 15px;
+}
+
+
+.hero-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    object-position: center 10%; /* ←ここ追加 */
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(139,111,71,0.25);
+  display: block;
+  margin: 0 auto;
+
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -85,6 +107,14 @@ body {
   z-index: 1;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.hero-sub{
+  font-size: 80%;
+  color: rgba(108,84,86,0.75);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin: 10px 10%;
 }
 
 .diploma-badge {
@@ -461,7 +491,7 @@ body {
 
 .what-is-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 15px auto 0 auto;
   text-align: center;
 }
 
@@ -535,7 +565,7 @@ body {
 
 .before-after-content {
   max-width: 900px;
-  margin: 80px auto 0;
+  margin: 30px auto 0;
   text-align: center;
 }
 
@@ -568,8 +598,8 @@ body {
   border-top: 15px solid #f5ede4;
 }
 
-.before-after-images {
-  margin-bottom: 30px;
+.before-after-image {
+  border-radius: 25px;
 }
 
 .before-after0detail-images {
@@ -2911,7 +2941,7 @@ body {
   height: 8px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--color-accent), rgba(212,165,116,.75));
-  width: 65%;
+  width: 52%;
   box-shadow: 0 8px 18px rgba(185,123,134,0.20);
   position: relative;
   overflow: hidden;
@@ -2931,31 +2961,7 @@ body {
   100%{ left:110%; }
 }
 
-.progress-dots{
-  display:flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-.dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(108,84,86,0.18);
-  border: 1px solid rgba(108,84,86,0.12);
-}
-.dot.on{
-  background: rgba(185,123,134,0.85);
-  border-color: rgba(185,123,134,0.45);
-  box-shadow: 0 6px 14px rgba(185,123,134,0.25);
-}
-.progress-labels{
-  display:flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: rgba(108,84,86,0.75);
-  font-weight: 700;
-  margin-top: 6px;
-}
+
 
 /* 補足 */
 .support-note{
@@ -2963,6 +2969,28 @@ body {
   font-size: 12px;
   color: rgba(108,84,86,0.78);
   line-height: 1.7;
+}
+
+
+.premium-closing{
+  margin: 10px 5%;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.closing-main{
+  font-size: 110%;
+  font-weight: 700;
+  color: #6C5456;
+  letter-spacing: .04em;
+}
+
+.closing-sub{
+  margin-top: 10px;
+  font-size: 100%;
+  font-weight: 600;
+  color: rgba(185,123,134,0.95);
+  letter-spacing: .06em;
 }
 
 /* SPでも崩れない */
@@ -2977,35 +3005,76 @@ body {
   box-shadow: 0 10px 26px rgba(212,165,116,0.25);
 }
 
-/* カード背景：ピンク統一のまま、ゴールドの光を足す */
 .course-main-card-elite{
   position: relative;
-  border: 2px solid rgba(212,165,116,0.35);
-  background:
-    radial-gradient(circle at 20% 10%, rgba(212,165,116,0.14), transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(185,123,134,0.10), transparent 45%),
-    linear-gradient(180deg, rgba(255,249,245,0.70), rgba(255,255,255,0.98));
+  border-radius: 30px;
+  background: #fff;
+  overflow: hidden;
+
+  border: 4px solid rgba(212,165,116,0.5);
   box-shadow:
-    0 24px 70px rgba(139,111,71,0.16),
-    0 10px 26px rgba(185,123,134,0.10);
+    0 20px 50px rgba(139,111,71,0.15),
+    inset 0 1px 1px rgba(255,255,255,0.8);
 }
 
-/* うっすらシャイン */
+/* メタリック枠（本体） */
+.course-main-card-elite::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: 30px;
+  padding: 2px; /* 枠の太さ */
+  background: linear-gradient(135deg,
+    rgba(255,244,214,0.9),
+    rgba(212,165,116,0.95),
+    rgba(255,255,255,0.85),
+    rgba(185,123,134,0.55),
+    rgba(212,165,116,0.95)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+  z-index: 3;
+  box-shadow:
+    0 18px 50px rgba(139,111,71,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.85);
+}
+
+/* うっすら光が走る（高級感） */
 .course-main-card-elite::before{
   content:"";
   position:absolute;
-  inset: 0;
-  border-radius: 30px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
-  transform: translateX(-120%);
-  animation: eliteShine 5s ease-in-out infinite;
-  pointer-events: none;
-  opacity: .8;
+  inset:-40%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.25) 50%,
+    transparent 60%
+  );
+  transform: translateX(-30%) rotate(10deg);
+  animation: eliteSweep 6.5s ease-in-out infinite;
+  pointer-events:none;
+  z-index: 2;
+  opacity: .6;
 }
-@keyframes eliteShine{
-  0%{ transform: translateX(-120%); }
-  45%{ transform: translateX(120%); }
-  100%{ transform: translateX(120%); }
+@keyframes eliteSweep{
+  0%   { transform: translateX(-40%) rotate(10deg); }
+  55%  { transform: translateX(35%) rotate(10deg); }
+  100% { transform: translateX(35%) rotate(10deg); }
+}
+
+@keyframes metalShine{
+  0%{ background-position: 0% 50%; }
+  100%{ background-position: 100% 50%; }
+}
+
+/* 中身を枠より手前に */
+.course-main-card-elite > *{
+  position: relative;
+  z-index: 1;
 }
 
 .elite-ribbon{
@@ -3184,4 +3253,433 @@ body {
 .testimonial-video-box iframe{
   width: 100%;
   height: 100%;
+}
+
+.premium-hero-visual{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  overflow: hidden;
+  /* 既存の背景/影はそのまま */
+}
+
+.premium-hero-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+    object-position: center 73%; /* ←ここ追加 */
+
+}
+
+.elite-hero-visual{
+  position: relative;
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(250,241,242,0.9), rgba(255,242,214,0.35));
+  border: 1px solid rgba(212,165,116,0.22);
+  box-shadow: 0 16px 40px rgba(139,111,71,0.12);
+}
+
+.elite-hero-visual img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.01);
+}
+
+.elite-hero-glow{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(212,165,116,0.18), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(185,123,134,0.18), transparent 50%);
+  pointer-events:none;
+}
+
+
+.consult-box{
+  margin: 30px 0 18px;
+  padding: 26px 20px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(250,241,242,0.9),
+    rgba(255,255,255,0.95)
+  );
+  border: 1px solid rgba(185,123,134,0.25);
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(139,111,71,0.10);
+}
+
+.consult-lead{
+  font-weight: 700;
+  font-size: 17px;
+  color: #6C5456;
+  line-height: 1.8;
+}
+
+.consult-sub{
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(108,84,86,0.75);
+  font-weight: 600;
+}
+
+/* 既存CTAの pulse をそのまま使う前提で、個別相談用だけ配色変更 */
+.cta-button--consult{
+  background: linear-gradient(135deg, #d4a574, #C89B6F);
+  box-shadow: 0 10px 30px rgba(212,165,116,0.35);
+}
+
+/* hover / active も既存と同じ動きで、影だけ少し合わせる */
+.cta-button--consult:hover{
+  box-shadow: 0 20px 50px rgba(212,165,116,0.45);
+}
+.cta-button--consult:active{
+  box-shadow: 0 10px 25px rgba(212,165,116,0.38);
+}
+
+
+/* =========================
+  Elite Closing + Price + CTA
+========================= */
+
+.elite-closing{
+  margin-top: 28px;
+  padding: 26px 22px;
+  border-radius: 26px;
+  text-align: center;
+  background: linear-gradient(135deg,
+    rgba(255,255,255,0.96),
+    rgba(250,241,242,0.55)
+  );
+  border: 1px solid rgba(212,165,116,0.28);
+  box-shadow: 0 18px 44px rgba(139,111,71,0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+/* うっすらシャイン（プレミアムと系統統一） */
+.elite-closing::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255,255,255,0.55),
+    transparent
+  );
+  transform: translateX(-120%);
+  animation: eliteShine 5s ease-in-out infinite;
+  pointer-events:none;
+  opacity: .7;
+}
+
+.elite-closing-main{
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(108,84,86,0.88);
+  line-height: 1.8;
+}
+
+.elite-closing-sub{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  color: rgba(108,84,86,0.92);
+}
+
+.elite-closing-strong{
+  background: linear-gradient(135deg, #5a4332 0%, #8B6F47 35%, #d4a574 60%, #5a4332 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.elite-closing-accent{
+  color: rgba(185,123,134,0.95);
+}
+
+/* 値段ボックスをElite寄せに微調整（既存UIに上品足し） */
+.course-price-box-elite .price-highlight-elite{
+  border-radius: 22px;
+}
+
+/* CTA上の案内文 */
+.elite-consult-text{
+  margin: 18px 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(108,84,86,0.78);
+}
+
+/* consultボタン色（アニメは .cta-button 側で統一） */
+.cta-button-consult{
+  background: linear-gradient(135deg, #d4a574, #C89B6F);
+  box-shadow: 0 10px 30px rgba(212,165,116,0.35);
+}
+.cta-button-consult:hover{
+  box-shadow: 0 20px 50px rgba(212,165,116,0.45);
+}
+.cta-button-consult:active{
+  box-shadow: 0 10px 25px rgba(212,165,116,0.38);
+}
+
+/* =========================
+  4つのポイント
+========================= */
+.points{
+  padding: 60px 12px;
+  background: linear-gradient(180deg, rgba(250,241,242,0.55), rgba(255,255,255,0.96));
+}
+
+.points-number-accent{
+  color: rgba(185,123,134,0.95);
+  font-weight: 900;
+}
+
+.points-grid{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.point-card{
+  position: relative;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(185,123,134,0.18);
+  box-shadow: 0 18px 45px rgba(139,111,71,0.10);
+  padding: 26px 22px 22px;
+  overflow: hidden;
+}
+
+.point-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(185,123,134,0.12), transparent 42%),
+    radial-gradient(circle at 85% 25%, rgba(212,165,116,0.10), transparent 44%);
+  opacity: .9;
+}
+
+.point-badge{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: .04em;
+  background: linear-gradient(135deg, rgba(185,123,134,0.95), rgba(212,165,116,0.90));
+  box-shadow: 0 12px 26px rgba(212,165,116,0.18);
+  border: 1px solid rgba(255,255,255,0.55);
+  margin-bottom: 14px;
+}
+
+.point-title{
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 900;
+  color: rgba(108,84,86,0.95);
+  line-height: 1.35;
+}
+
+.point-title-sub{
+  display:inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(185,123,134,0.10);
+  border: 1px solid rgba(185,123,134,0.18);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.point-text{
+  margin: 0 0 12px;
+  color: rgba(108,84,86,0.78);
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 600;
+}
+
+.point-emphasis{
+  margin: 10px 0 12px;
+  color: rgba(185,123,134,0.95);
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 900;
+}
+
+.point-quote{
+  margin: 14px 0 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(250,241,242,0.9);
+  border: 1px dashed rgba(185,123,134,0.28);
+  color: rgba(108,84,86,0.78);
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.point-card-last{
+  border-color: rgba(212,165,116,0.22);
+}
+
+/* 画像入れる場合（任意） */
+.point-illust{
+  width: 100%;
+  max-width: 220px;
+  display: block;
+  margin: 10px auto 0;
+}
+
+@media (max-width: 768px){
+  .points-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .point-card{
+    padding: 22px 18px 18px;
+    border-radius: 22px;
+  }
+  .point-title{
+    font-size: 17px;
+  }
+  .point-text, .point-emphasis, .point-quote{
+    font-size: 13.5px;
+  }
+}
+
+
+/* =========================
+  RESULTS SECTION
+========================= */
+
+.results{
+  padding: 80px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,1),
+    rgba(250,241,242,0.6)
+  );
+  text-align: center;
+}
+
+.results-title{
+  margin-bottom: 18px;
+}
+
+.results-lead{
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(108,84,86,0.8);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.results-highlight{
+  font-weight: 800;
+  background: linear-gradient(135deg, #8B6F47, #d4a574);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* グリッド */
+.results-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* カード */
+.result-item{
+  padding: 28px 22px;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(185,123,134,0.18);
+  box-shadow: 0 20px 55px rgba(139,111,71,0.08);
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* うっすら光 */
+.result-item::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 10%, rgba(212,165,116,0.12), transparent 40%);
+  pointer-events: none;
+}
+
+.result-item:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(139,111,71,0.15);
+}
+
+/* 数字デザイン */
+.result-number{
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  background: linear-gradient(135deg, #5a4332 0%, #8B6F47 35%, #d4a574 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.result-text{
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(108,84,86,0.75);
+}
+
+/* 最高売上だけ強調 */
+.result-item-gold{
+  border: 1px solid rgba(212,165,116,0.35);
+  box-shadow: 0 25px 60px rgba(212,165,116,0.25);
+}
+
+/* SP */
+@media(max-width:768px){
+  .results-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.results-visual{
+  margin: 28px auto 40px;
+  max-width: 90%;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 28px 70px rgba(139,111,71,0.18);
+  border: 2px solid rgba(212,165,116,0.25);
+}
+
+/* うっすらラグジュアリー光 */
+.results-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(212,165,116,0.15), transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(185,123,134,0.12), transparent 60%);
+  pointer-events:none;
+}
+
+.results-visual img{
+  width:100%;
+  display:block;
 }
