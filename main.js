@@ -199,20 +199,22 @@ document.querySelector('#app').innerHTML = `
     </div>
   </section>
 
-  <!-- =========================
-  ヴィーナス美顔ヨガが選ばれる4つのポイント
-========================== -->
-<section id="points" class="section points fade-in">
+  <section id="points" class="section points fade-in">
   <div class="container">
     <h2 class="section-title">
       ヴィーナス美顔ヨガが<br class="sp-only">選ばれる<span class="points-number-accent">4</span>つのポイント
     </h2>
 
     <div class="points-grid">
-      <!-- 1 -->
       <article class="point-card">
-        <div class="point-badge">1</div>
-        <h3 class="point-title">お金をかけずに綺麗になれる</h3>
+        <div class="point-header">
+          <div class="point-badge">1</div>
+          <h3 class="point-title">お金をかけずに綺麗になれる</h3>
+        </div>
+
+        <div class="point-image">
+          <img src="img/skincare.png" alt="お金をかけずに綺麗になれる">
+        </div>
 
         <p class="point-text">
           一度覚えたら、一生自分でメンテナンスでき、
@@ -226,15 +228,17 @@ document.querySelector('#app').innerHTML = `
         <p class="point-text">
           場所を選ばず、どこでも実践することができます。
         </p>
-
-        <!-- 画像を入れるならここ（任意） -->
-        <!-- <img class="point-illust" src="img/point1.png" alt="ポイント1"> -->
       </article>
 
-      <!-- 2 -->
       <article class="point-card">
-        <div class="point-badge">2</div>
-        <h3 class="point-title">あなたの悩みに合わせた<br><span class="point-title-sub">レクチャー</span></h3>
+        <div class="point-header">
+          <div class="point-badge">2</div>
+          <h3 class="point-title">あなたの悩みに合わせた<br>レクチャー</h3>
+        </div>
+
+        <div class="point-image">
+          <img src="img/zoom.jpg" alt="悩みに合わせたレクチャー">
+        </div>
 
         <p class="point-text">
           他の顔ヨガ講座では、決まったポーズしか学べない所がほとんどです。
@@ -246,10 +250,15 @@ document.querySelector('#app').innerHTML = `
         </p>
       </article>
 
-      <!-- 3 -->
       <article class="point-card">
-        <div class="point-badge">3</div>
-        <h3 class="point-title">リフトアップだけでなく<br><span class="point-title-sub">首肩こりが解消</span></h3>
+        <div class="point-header">
+          <div class="point-badge">3</div>
+          <h3 class="point-title">リフトアップだけでなく<br>首肩こりが解消</h3>
+        </div>
+
+        <div class="point-image">
+          <img src="img/shoulder.png" alt="首肩こり解消">
+        </div>
 
         <p class="point-text">
           お顔のたるみの大きな原因である、首肩こりに効果的な上半身のアプローチをしっかり行うことで、
@@ -261,10 +270,15 @@ document.querySelector('#app').innerHTML = `
         </p>
       </article>
 
-      <!-- 4 -->
       <article class="point-card point-card-last">
-        <div class="point-badge">4</div>
-        <h3 class="point-title">愛されマインドが身につき<br>自分のことがもっと好きになる</h3>
+        <div class="point-header">
+          <div class="point-badge">4</div>
+          <h3 class="point-title">愛されマインドが身につき<br>自分のことがもっと好きになる</h3>
+        </div>
+
+        <div class="point-image">
+          <img src="img/selflove.png" alt="愛されマインド">
+        </div>
 
         <p class="point-text">
           どんなに美容に気を使っていても心の状態が整ってないとお顔は変化しきれません。

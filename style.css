@@ -3499,6 +3499,15 @@ body {
   margin-bottom: 14px;
 }
 
+/* バッジとタイトルを横並びにする */
+.point-header {
+  display: flex;
+  align-items: center; /* 上下中央揃え */
+  gap: 15px;           /* バッジとタイトルの間隔 */
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
 .point-title{
   margin: 0 0 12px;
   font-size: 18px;
@@ -3515,6 +3524,20 @@ body {
   border: 1px solid rgba(185,123,134,0.18);
   font-size: 14px;
   font-weight: 900;
+}
+/* 追加した画像エリアの設定 */
+.point-image {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.point-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .point-text{
