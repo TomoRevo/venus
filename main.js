@@ -160,7 +160,7 @@ document.querySelector('#app').innerHTML = `
   <div class="testimonial-video-box">
 
     <iframe
-      src="https://www.youtube.com/embed/s67BEJsQ4gk?si=6v4Ihrz_I1QGWVIC"
+      src="https://www.youtube.com/embed/la4GLwvaypE?si=xmljxghwwc2pOvc_"
       title="受講生インタビュー動画"
       frameborder="0"
       allow="autoplay; encrypted-media; picture-in-picture"
