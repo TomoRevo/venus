@@ -654,7 +654,7 @@ document.querySelector('#app').innerHTML = `
 
             <div class="course-header">
               <div class="course-title-box">
-                <h3 class="course-main-title">愛されヴィーナス プレミアムクラス</h3>
+                <h3 class="course-main-title">愛されヴィーナス<br>プレミアムクラス</h3>
                 <div class="premium-hero-visual">
   <img src="img/リゾート2.jpg" alt="愛されヴィーナス プレミアムクラス イメージ" />
 </div>
@@ -810,20 +810,21 @@ document.querySelector('#app').innerHTML = `
 
     <div class="course-header">
       <div class="course-title-box">
-        <h3 class="course-main-title course-main-title-elite">愛されヴィーナス エリートクラス</h3>
+        <h3 class="course-main-title course-main-title-elite">愛されヴィーナス<br>エリートクラス</h3>
         <!-- イメージ（エリート導入） -->
 <div class="elite-hero-visual">
   <img src="img/venus2.jpg" alt="愛されヴィーナス エリートクラス イメージ" />
 </div>
         <p class="course-period course-period-elite">6ヶ月間で自分らしい働き方を確立</p>
+        <p class="course-req">※3名限定</p>
         <p class="course-req">※プレミアムクラス修了者対象</p>
       </div>
     </div>
 
     <div class="course-description-box course-description-box-elite">
       <p>
-        顔ヨガを「単発収入」で終わらせず、<br>
-        <b>安定した仕事</b>として育てていき、自分らしい働き方を確立しましょう。
+       顔ヨガを「副収入」ではなく
+       <br>“人生の柱”にする6ヶ月。
       </p>
     </div>
 
@@ -831,10 +832,10 @@ document.querySelector('#app').innerHTML = `
 
       <!-- 目的 -->
       <div class="lesson-item lesson-item-elite">
-        <span class="lesson-number lesson-number-elite">エリートクラスの目的</span>
+        <span class="lesson-number lesson-number-elite">3名限定の理由</span>
         <span class="lesson-title">
-          顔ヨガを単発収入ではなく<br class="sp-only">
-          「安定した仕事」に育てる。
+          このクラスは、結果を出すための“育成枠”。
+          <br>人数を増やさないのは、本気で引き上げるから。
         </span>
       </div>
 
@@ -853,61 +854,21 @@ document.querySelector('#app').innerHTML = `
 
       <!-- ベネフィット -->
       <div class="lesson-item lesson-item-elite">
-        <span class="lesson-number lesson-number-elite">エリートクラスの特徴</span>
+        <span class="lesson-number lesson-number-elite">エリート専用特別環境</span>
         <span class="lesson-title">
           <ul class="curriculum-inline-list elite-list elite-benefit-list">
-            <li>集客の仕組みが安定する</li>
-            <li>商品設計が整う</li>
-            <li>価格に迷わなくなる</li>
-            <li>一人で悩まなくなる</li>
-            <li>仕事として回る状態になる</li>
+            <li>メグさん月1回 個別コンサル（6回）</li>
+            <li>認定講師月1回 個別フォロー（6回）</li>
+            <li>グループコンサル月2回（計12回）</li>
+            <li>チャット相談 無制限</li>
+            <li>憧れられるブランディング撮影付き</li>
+            <li>ヴィーナス塾生合宿優先参加枠</li>
           </ul>
         </span>
       </div>
+      
 
-      <!-- サポート内容 -->
-      <div class="lesson-item lesson-item-elite">
-        <span class="lesson-number lesson-number-elite">カリキュラム内容</span>
-       <div class="lesson-title">
-    <div class="support-phase-wrap elite-support-wrap">
 
-      <!-- 前半 -->
-      <div class="support-phase elite-phase">
-    <div class="support-phase-head">
-    <div class="phase-badge phase-badge-elite">前半</div>
-    <p class="support-phase-title">設計・土台づくり</p>
-  </div>
-        <ul class="curriculum-inline-list elite-list">
-          <li>グループ講座</li>
-          <li>伴走サポート</li>
-        </ul>
-      </div>
-
-      <!-- レベルアップ表現 -->
-      <div class="support-levelup elite-levelup" aria-hidden="true">
-        <div class="levelup-arrow">▼</div>
-      </div>
-
-      <!-- 後半 -->
-      <div class="support-phase elite-phase elite-phase-grow">
-      <div class="support-phase-head">
-    <div class="phase-badge phase-badge-elite">後半</div>
-    <p class="support-phase-title">仕組みを育て“回る状態”へ</p>
-  </div>
-
-        <div class="progress-rail elite-progress" aria-hidden="true">
-         
-
-        <ul class="curriculum-inline-list elite-list">
-          <li>伴走サポート</li>
-          <li>必要に応じた個別フォロー</li>
-          <li>プロのカメラマンによる撮影</li>
-        </ul>
-
-        <p class="support-note elite-note">
-          ※モチベーションに頼らず安定を生む<b>仕組み設計</b>
-        </p>
-      </div>
 
     </div>
   </div>
