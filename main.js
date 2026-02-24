@@ -1,5 +1,4 @@
-
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = /*html*/ `
   <section class="hero">
     <div class="hero-content">
       <div class="hero-brand">
@@ -432,16 +431,16 @@ document.querySelector('#app').innerHTML = `
           <div class="instructor-photo">
             <img src="./img/講師紹介.jpg" alt="講師 めぐ">
           </div>
-
+        </div>
         <div class="instructor-content">
-          <div class="instructor-name-box instructor-name-box-mobile">
+          <div class="instructor-name-box">
             <h3 class="instructor-name">加藤 潤（メグさん）</h3>
             <p class="instructor-subtitle">SalondeFuturオーナー
             <br>透明ほっぺケアメソッド
             <br>ヴィーナス美顔ヨガ創始者
             <br>厚労省認定セラピストスクール講師歴6年</p>
           </div>
-
+</div>
          <div class="instructor-bio">
 
   <p class="bio-intro">
@@ -452,15 +451,15 @@ document.querySelector('#app').innerHTML = `
 
   <p class="bio-career">
     現在はエステサロンでの施術と並行しながら、
-    オンラインで整形級の若返りが叶う
-    美顔ヨガ講座を主宰。
+    <br>オンラインで整形級の若返りが叶う
+   <br> 美顔ヨガ講座を主宰。
   </p>
   <br>
 
   <p class="bio-results">
     これまでに
     <span class="highlight-keyword">2000名以上</span>のお客様を
-    美しく変貌させてきました。
+    <br>美しく変貌させてきました。
   </p>
   <br>
 
@@ -470,8 +469,8 @@ document.querySelector('#app').innerHTML = `
   </p>
 
   <p>
-    「このまま老け続けるのは嫌だ」
-    そう思ったことが、美顔ヨガの研究の始まりでした。
+    <b>「このまま老け続けるのは嫌だ」</b>
+    <br>そう思ったことが、美顔ヨガの研究の始まりでした。
   </p>
   <br>
 
@@ -483,9 +482,9 @@ document.querySelector('#app').innerHTML = `
 
   <p>
     美容医療のような一時的な変化ではなく、
-    <span class="highlight-text">
+    <p class="highlight-text">
       一度身につければ一生使える美容法
-    </span>
+</p>
     をお伝えしています。
   </p>
   <br>
@@ -498,13 +497,13 @@ document.querySelector('#app').innerHTML = `
   <p class="final-message">
     そして、
     愛されながら選ばれる女性になるための
-    最初の一歩です。
+    <br>最初の一歩です。
   </p>
 
 </div>
-        </div>
+        
       </div>
-    </div>
+    
   </section>
 
   <section id="curriculum" class="section curriculum">
@@ -1075,14 +1074,15 @@ document.querySelector('#app').innerHTML = `
   <section class="section cta-final">
     <div class="container">
       <div class="cta-final-box">
-        <h2 class="cta-final-title">あなたの<br>「綺麗になりたい」<br>を応援します</h2>
+        <h2 class="cta-final-title">あなたの<br>「綺麗になりたい」を<br>一緒に叶えます。</h2>
         <p class="cta-final-text">
           これまで頑張ってきたあなただからこそ、<br>
           今度は自分を大切にする番です。<br><br>
-          「もう遅いかも」なんて、ありません。<br>
+          「もう遅いかも」なんてありません。<br>
+          今日が人生で一番若い日。<br>
           <br>
-          鏡を見るのが楽しみになる、<br>
-          自分を好きになれる、<br>
+          鏡を見るのが楽しみになる.<br>
+          自分をもっと好きになれる.<br>
           自分らしく生きられる。<br><br>
           そんな人生を、一緒に歩みませんか？
         </p>
@@ -1118,39 +1118,39 @@ document.querySelector('#app').innerHTML = `
 
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.classList.add("visible");
     }
   });
 }, observerOptions);
 
 setTimeout(() => {
-  document.querySelectorAll('.fade-in').forEach(el => {
+  document.querySelectorAll(".fade-in").forEach((el) => {
     observer.observe(el);
   });
 }, 100);
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
     }
   });
 });
 
-document.addEventListener('click', (e) => {
-  const wrap = e.target.closest('.youtube-thumb');
-  if(!wrap) return;
+document.addEventListener("click", (e) => {
+  const wrap = e.target.closest(".youtube-thumb");
+  if (!wrap) return;
 
   const id = wrap.dataset.videoId;
   wrap.innerHTML = `
