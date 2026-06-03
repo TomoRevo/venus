@@ -600,9 +600,35 @@ document.querySelector("#app").innerHTML = /*html*/ `
           
   <h4>✧ 開講日程 ✧</h4>
 
-  <p style="text-align:center; color:#6C5456; font-size:14px; line-height:1.8; margin:8px 0 4px;">
-    開講日程は、<strong style="color:#B97B86;">6月21日（土）21:00の募集開始時</strong>に<br>公式LINEにてご案内いたします。
-  </p>
+  <p style="text-align:center; color:#B97B86; font-size:13px; margin:4px 0 14px;">各クラス 月3回／全6回・どちらかをお選びいただけます</p>
+
+  <div class="schedule-columns">
+    <!-- 平日夜コース -->
+    <div class="schedule-column">
+      <h5>平日クラス　21:00〜22:30</h5>
+      <ul class="schedule-dates">
+        <li>① 7月9日（木）</li>
+        <li>② 7月16日（木）</li>
+        <li>③ 7月27日（月）</li>
+        <li>④ 8月5日（水）</li>
+        <li>⑤ 8月17日（月）</li>
+        <li>⑥ 8月26日（水）</li>
+      </ul>
+    </div>
+
+    <!-- 土日昼コース -->
+    <div class="schedule-column">
+      <h5>土日クラス　10:00〜11:30</h5>
+      <ul class="schedule-dates">
+        <li>① 7月5日（日）</li>
+        <li>② 7月18日（土）</li>
+        <li>③ 7月26日（日）</li>
+        <li>④ 8月2日（日）</li>
+        <li>⑤ 8月9日（日）</li>
+        <li>⑥ 8月22日（土）</li>
+      </ul>
+    </div>
+  </div>
 
 
           <div class="course-price-box">
