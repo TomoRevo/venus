@@ -645,7 +645,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
           <p style="text-align:center; color:#6C5456; margin:0 0 12px; font-size:13px;">
       ご興味のある方は、お早めに先行お申し込みを！<br>クラス・日程は後から変更できます♡
     </p>
-          <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
+          <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
       target="_blank"
       class="cta-button">
       先行申し込みはこちら▶︎
@@ -1106,7 +1106,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
   <div style="width:42px; height:1px; background:rgba(199,154,90,.45); margin:15px auto;"></div>
   <div style="font-size:13px; line-height:1.85; color:#6C5456;">ご興味のある方は、お早めに<br>先行お申し込みを！クラス・日程は<br>後から変更できます♡</div>
 </div>
-        <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
+        <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
    target="_blank"
    class="cta-button"
   >
