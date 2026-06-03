@@ -14,10 +14,12 @@ document.querySelector("#app").innerHTML = /*html*/ `
 
 </div>
 
-<div class="recruit-banner" style="margin:28px auto 10px; max-width:540px; background:linear-gradient(135deg,#B97B86 0%,#D3A1A8 100%); color:#fff; border-radius:18px; padding:20px 22px; box-shadow:0 10px 28px rgba(185,123,134,.30); text-align:center;">
-  <div style="font-size:13px; letter-spacing:.18em; opacity:.92; margin-bottom:8px;">＼ 次回募集スタート ／</div>
-  <div style="font-size:26px; font-weight:700; line-height:1.35; font-family:'Noto Serif JP',serif;">6月21日<span style="font-size:17px;">（土）</span> 21:00〜</div>
-  <div style="font-size:13px; margin-top:8px; opacity:.95;">この日時より募集スタート。<br>まずは公式LINEにご登録のうえ、開始のお知らせをお待ちください。</div>
+<div class="recruit-banner" style="margin:30px auto 18px; max-width:520px; background:linear-gradient(180deg,#ffffff 0%,#FCF6F2 100%); border:1px solid rgba(199,154,90,.32); border-radius:20px; padding:26px 24px 24px; box-shadow:0 14px 34px rgba(185,123,134,.16); text-align:center;">
+  <div style="display:inline-block; padding:5px 20px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:11px; letter-spacing:.24em; border-radius:999px; box-shadow:0 4px 12px rgba(199,154,90,.32);">RECRUITMENT</div>
+  <div style="font-size:13px; letter-spacing:.16em; color:#B97B86; margin:14px 0 6px;">次回募集スタート</div>
+  <div style="font-size:30px; font-weight:700; line-height:1.3; font-family:'Noto Serif JP',serif; color:#6C5456;">6月21日<span style="font-size:18px;">（土）</span> <span style="color:#B97B86;">21:00</span><span style="font-size:18px; color:#6C5456;">〜</span></div>
+  <div style="width:44px; height:1px; background:rgba(199,154,90,.45); margin:16px auto;"></div>
+  <div style="font-size:13px; line-height:1.85; color:#6C5456;">まずは公式LINEにご登録のうえ、<br>募集開始のお知らせをお待ちください。</div>
 </div>
 
 <a href="#curriculum"
