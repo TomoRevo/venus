@@ -598,33 +598,9 @@ document.querySelector("#app").innerHTML = /*html*/ `
           
   <h4>✧ 開講日程 ✧</h4>
 
-  <div class="schedule-columns">
-    <!-- 平日夜コース -->
-    <div class="schedule-column">
-      <h5>平日クラス　21:00〜22:30</h5>
-      <ul class="schedule-dates">
-        <li>① 3月10日（火）</li>
-        <li>② 3月18日（水）</li>
-        <li>③ 3月25日（水）</li>
-        <li>④ 4月2日（木）</li>
-        <li>⑤ 4月14日（火）</li>
-        <li>⑥ 4月21日（火）</li>
-      </ul>
-    </div>
-
-    <!-- 土日昼コース -->
-    <div class="schedule-column">
-      <h5>土日クラス　10:00〜11:30</h5>
-      <ul class="schedule-dates">
-        <li>① 3月8日（日）</li>
-        <li>② 3月15日（日）</li>
-        <li>③ 3月21日（土）</li>
-        <li>④ 4月4日（土）</li>
-        <li>⑤ 4月11日（土）</li>
-        <li>⑥ 4月19日（日）</li>
-      </ul>
-    </div>
-  </div>
+  <p style="text-align:center; color:#6C5456; font-size:14px; line-height:1.8; margin:8px 0 4px;">
+    開講日程は、<strong style="color:#B97B86;">6月21日（土）21:00の募集開始時</strong>に<br>公式LINEにてご案内いたします。
+  </p>
 
 
           <div class="course-price-box">
