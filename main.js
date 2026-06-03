@@ -14,8 +14,11 @@ document.querySelector("#app").innerHTML = /*html*/ `
 
 </div>
 
-
-     
+<div class="recruit-banner" style="margin:28px auto 10px; max-width:540px; background:linear-gradient(135deg,#B97B86 0%,#D3A1A8 100%); color:#fff; border-radius:18px; padding:20px 22px; box-shadow:0 10px 28px rgba(185,123,134,.30); text-align:center;">
+  <div style="font-size:13px; letter-spacing:.18em; opacity:.92; margin-bottom:8px;">＼ 次回募集スタート ／</div>
+  <div style="font-size:26px; font-weight:700; line-height:1.35; font-family:'Noto Serif JP',serif;">6月21日<span style="font-size:17px;">（土）</span> 21:00〜</div>
+  <div style="font-size:13px; margin-top:8px; opacity:.95;">この日時より募集スタート。<br>まずは公式LINEにご登録のうえ、開始のお知らせをお待ちください。</div>
+</div>
 
 <a href="#curriculum"
    target="_blank"
@@ -632,10 +635,16 @@ document.querySelector("#app").innerHTML = /*html*/ `
             </div>
           </div>
 
+          <p style="text-align:center; font-weight:700; color:#B97B86; margin:0 0 4px; font-size:15px; letter-spacing:.04em;">
+      📅 募集開始：6月21日（土）21:00〜
+    </p>
+          <p style="text-align:center; color:#6C5456; margin:0 0 12px; font-size:13px;">
+      募集開始までに、公式LINEにご登録ください。<br>21時にこちらで募集をご案内します。
+    </p>
           <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
       target="_blank"
       class="cta-button">
-      お申し込みはこちら▶︎
+      公式LINEに登録する▶︎
     </a>
         </div>
       </div>
@@ -1086,11 +1095,17 @@ document.querySelector("#app").innerHTML = /*html*/ `
           自分らしく生きられる。<br><br>
           そんな人生を、一緒に歩みませんか？
         </p>
+        <p style="text-align:center; font-weight:700; color:#B97B86; margin:0 0 4px; font-size:16px; letter-spacing:.04em;">
+  📅 募集開始：6月21日（土）21:00〜
+</p>
+        <p style="text-align:center; color:#6C5456; margin:0 0 14px; font-size:13px;">
+  募集開始までに、公式LINEにご登録ください。<br>21時にこちらで募集をご案内します。
+</p>
         <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
    target="_blank"
    class="cta-button"
   >
-  お申し込みはこちら▶︎
+  公式LINEに登録する▶︎
 </a>
 
 
