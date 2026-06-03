@@ -1073,12 +1073,13 @@ document.querySelector("#app").innerHTML = /*html*/ `
           自分らしく生きられる。<br><br>
           そんな人生を、一緒に歩みませんか？
         </p>
-        <p style="text-align:center; font-weight:700; color:#B97B86; margin:0 0 4px; font-size:16px; letter-spacing:.04em;">
-  📅 募集開始：6月21日（土）21:00〜
-</p>
-        <p style="text-align:center; color:#6C5456; margin:0 0 14px; font-size:13px;">
-  募集開始までに、公式LINEにご登録ください。<br>21時にこちらで募集をご案内します。
-</p>
+        <div style="margin:8px auto 24px; max-width:440px; background:linear-gradient(180deg,#FCF6F2 0%,#F9EDEF 100%); border:1px solid rgba(199,154,90,.30); border-radius:18px; padding:24px 22px 22px; text-align:center;">
+  <div style="display:inline-block; padding:4px 16px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:10px; letter-spacing:.22em; border-radius:999px; box-shadow:0 3px 10px rgba(199,154,90,.3);">ADMISSION</div>
+  <div style="font-size:12px; letter-spacing:.14em; color:#B97B86; margin:12px 0 5px;">募集開始</div>
+  <div style="font-size:25px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.3;">6月21日<span style="font-size:16px;">（土）</span> <span style="color:#B97B86;">21:00</span><span style="font-size:16px; color:#6C5456;">〜</span></div>
+  <div style="width:42px; height:1px; background:rgba(199,154,90,.45); margin:15px auto;"></div>
+  <div style="font-size:13px; line-height:1.85; color:#6C5456;">募集開始までに公式LINEへご登録を。<br>21時にこちらで募集をご案内します。</div>
+</div>
         <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=vUNILZ"
    target="_blank"
    class="cta-button"
