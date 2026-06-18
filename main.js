@@ -1,6 +1,13 @@
 // 開講日程の公開時刻（この時刻を過ぎると自動で日程が表示されます）
 const SCHEDULE_REVEAL_TS = new Date('2026-06-04T12:00:00+09:00').getTime();
 
+// 募集開始時刻（この時刻を過ぎると「申し込みはこちら」CTAのリンクが本募集用に切り替わります）
+const CTA_SWITCH_TS = new Date('2026-06-21T21:00:00+09:00').getTime();
+// 申し込みCTAのリンク：21:00前は先行案内(9ZkFVH)、21:00以降は本募集(xQQvXk)
+const ctaApplyHref = (Date.now() >= CTA_SWITCH_TS)
+  ? 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=xQQvXk'
+  : 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
+
 const scheduleRevealedHtml = /*html*/ `
   <p style="text-align:center; color:#B97B86; font-size:13px; margin:4px 0 14px;">各クラス 月3回／全6回・どちらかをお選びいただけます</p>
 
@@ -650,7 +657,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
           <p style="text-align:center; font-weight:700; color:#B97B86; margin:0 0 4px; font-size:15px; letter-spacing:.04em;">
       📅 募集開始：6月21日（日）21:00〜
     </p>
-          <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
+          <a href="${ctaApplyHref}"
       target="_blank"
       class="cta-button">
       申し込みはこちら▶︎
@@ -1109,7 +1116,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
   <div style="font-size:12px; letter-spacing:.14em; color:#B97B86; margin:12px 0 5px;">募集開始</div>
   <div style="font-size:25px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.3;">6月21日<span style="font-size:16px;">（日）</span> <span style="color:#B97B86;">21:00</span><span style="font-size:16px; color:#6C5456;">〜</span></div>
 </div>
-        <a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
+        <a href="${ctaApplyHref}"
    target="_blank"
    class="cta-button"
   >
@@ -1191,6 +1198,14 @@ document.addEventListener("click", (e) => {
 // 公開時刻前にページを開いている場合、時刻になったら自動でリロードして日程を表示
 (() => {
   const ms = SCHEDULE_REVEAL_TS - Date.now();
+  if (ms > 0 && ms < 2147483647) {
+    setTimeout(() => location.reload(), ms + 1500);
+  }
+})();
+
+// 募集開始(21:00)前にページを開いている場合、時刻になったら自動リロードしてCTAを本募集リンクに切り替える
+(() => {
+  const ms = CTA_SWITCH_TS - Date.now();
   if (ms > 0 && ms < 2147483647) {
     setTimeout(() => location.reload(), ms + 1500);
   }
