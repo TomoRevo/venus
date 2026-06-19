@@ -26,7 +26,7 @@ const scheduleRevealedHtml = /*html*/ `
     <div class="schedule-column">
       <h5>土日クラス　10:00〜11:30</h5>
       <ul class="schedule-dates">
-        <li>① 7月5日（日）</li>
+        <li>① 7月4日（土）</li>
         <li>② 7月18日（土）</li>
         <li>③ 7月26日（日）</li>
         <li>④ 8月2日（日）</li>
