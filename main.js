@@ -658,7 +658,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
           </div>
 
           <p style="text-align:center; font-weight:700; color:#B97B86; margin:0 0 4px; font-size:15px; letter-spacing:.04em;">
-      ${isRecruiting ? '📅 ただいま募集中！' : '📅 募集開始：6月21日（日）21:00〜'}
+      ${isRecruiting ? 'ただいま募集中！' : '募集開始：6月21日（日）21:00〜'}
     </p>
           <a href="${ctaApplyHref}"
       target="_blank"
