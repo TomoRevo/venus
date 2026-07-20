@@ -1,6 +1,3 @@
-// 開講日程の公開時刻（この時刻を過ぎると自動で日程が表示されます）
-const SCHEDULE_REVEAL_TS = new Date('2026-06-04T12:00:00+09:00').getTime();
-
 // 募集開始時刻（この時刻を過ぎると「申し込みはこちら」CTAのリンクが本募集用に切り替わります）
 const CTA_SWITCH_TS = new Date('2026-06-21T21:00:00+09:00').getTime();
 // 申し込みCTAのリンク：21:00前は先行案内(9ZkFVH)、21:00以降は本募集(xQQvXk)
@@ -8,40 +5,10 @@ const ctaApplyHref = (Date.now() >= CTA_SWITCH_TS)
   ? 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=xQQvXk'
   : 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
 
-const scheduleRevealedHtml = /*html*/ `
-  <p style="text-align:center; color:#B97B86; font-size:13px; margin:4px 0 14px;">各クラス 月3回／全6回・どちらかをお選びいただけます</p>
-
-  <div class="schedule-columns">
-    <div class="schedule-column">
-      <h5>平日クラス　21:00〜22:30</h5>
-      <ul class="schedule-dates">
-        <li>① 7月9日（木）</li>
-        <li>② 7月16日（木）</li>
-        <li>③ 7月27日（月）</li>
-        <li>④ 8月5日（水）</li>
-        <li>⑤ 8月17日（月）</li>
-        <li>⑥ 8月26日（水）</li>
-      </ul>
-    </div>
-    <div class="schedule-column">
-      <h5>土日クラス　10:00〜11:30</h5>
-      <ul class="schedule-dates">
-        <li>① 7月4日（土）</li>
-        <li>② 7月18日（土）</li>
-        <li>③ 7月26日（日）</li>
-        <li>④ 8月2日（日）</li>
-        <li>⑤ 8月9日（日）</li>
-        <li>⑥ 8月22日（土）</li>
-      </ul>
-    </div>
-  </div>`;
-
-const schedulePlaceholderHtml = /*html*/ `
-  <p style="text-align:center; color:#6C5456; font-size:14px; line-height:1.9; margin:16px 0 8px;">
-    開講日程は <strong style="color:#B97B86;">6/4（木）12:00</strong> に公開いたします。<br>もうしばらくお待ちください♡
+const scheduleHtml = /*html*/ `
+  <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 8px;">
+    次回秋に開催予定！
   </p>`;
-
-const scheduleHtml = (Date.now() >= SCHEDULE_REVEAL_TS) ? scheduleRevealedHtml : schedulePlaceholderHtml;
 
 document.querySelector("#app").innerHTML = /*html*/ `
   <section class="hero">
@@ -1180,14 +1147,6 @@ document.addEventListener("click", (e) => {
     ></iframe>
   `;
 });
-
-// 公開時刻前にページを開いている場合、時刻になったら自動でリロードして日程を表示
-(() => {
-  const ms = SCHEDULE_REVEAL_TS - Date.now();
-  if (ms > 0 && ms < 2147483647) {
-    setTimeout(() => location.reload(), ms + 1500);
-  }
-})();
 
 // 募集開始(21:00)前にページを開いている場合、時刻になったら自動リロードしてCTAを本募集リンクに切り替える
 (() => {
