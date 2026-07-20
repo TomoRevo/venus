@@ -10,6 +10,21 @@ const scheduleHtml = /*html*/ `
     次回秋に開催予定！
   </p>`;
 
+// 次回開催のお知らせバナー（ヒーロー / 最終CTAの2箇所で使用）
+const nextTermBannerHtml = /*html*/ `
+<div class="recruit-banner" style="margin:30px auto 18px; max-width:520px; background:linear-gradient(180deg,#ffffff 0%,#FCF6F2 100%); border:1px solid rgba(199,154,90,.32); border-radius:20px; padding:26px 24px 24px; box-shadow:0 14px 34px rgba(185,123,134,.16); text-align:center;">
+  <div style="display:inline-block; padding:5px 20px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:11px; letter-spacing:.24em; border-radius:999px; box-shadow:0 4px 12px rgba(199,154,90,.32);">ADMISSION</div>
+  <div style="font-size:13px; letter-spacing:.16em; color:#B97B86; margin:14px 0 6px;">次回開催</div>
+  <div style="font-size:30px; font-weight:700; line-height:1.3; font-family:'Noto Serif JP',serif; color:#6C5456;">2026年 <span style="color:#B97B86;">秋</span><span style="font-size:18px; color:#6C5456;">　開催決定</span></div>
+</div>`;
+
+const nextTermBannerSmallHtml = /*html*/ `
+<div style="margin:8px auto 24px; max-width:440px; background:linear-gradient(180deg,#FCF6F2 0%,#F9EDEF 100%); border:1px solid rgba(199,154,90,.30); border-radius:18px; padding:24px 22px 22px; text-align:center;">
+  <div style="display:inline-block; padding:4px 16px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:10px; letter-spacing:.22em; border-radius:999px; box-shadow:0 3px 10px rgba(199,154,90,.3);">ADMISSION</div>
+  <div style="font-size:12px; letter-spacing:.14em; color:#B97B86; margin:12px 0 5px;">次回開催</div>
+  <div style="font-size:25px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.3;">2026年 <span style="color:#B97B86;">秋</span><span style="font-size:16px; color:#6C5456;">　開催決定</span></div>
+</div>`;
+
 document.querySelector("#app").innerHTML = /*html*/ `
   <section class="hero">
     <div class="hero-content">
@@ -25,6 +40,8 @@ document.querySelector("#app").innerHTML = /*html*/ `
 </p>
 
 </div>
+
+${nextTermBannerHtml}
 
 <a href="#curriculum"
    target="_blank"
@@ -1069,6 +1086,7 @@ document.querySelector("#app").innerHTML = /*html*/ `
           自分らしく生きられる。<br><br>
           そんな人生を、一緒に歩みませんか？
         </p>
+        ${nextTermBannerSmallHtml}
         <a href="${ctaApplyHref}"
    target="_blank"
    class="cta-button"
