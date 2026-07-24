@@ -783,13 +783,14 @@ ${nextTermBannerHtml}
 </div>
 
 <p class="elite-consult-text">
-  プレミアムクラスにご興味がある方は、まずは個別相談へご案内いたします。
+  プレミアムクラスは、顔ヨガグループレッスン受講後のステップアップクラスです。<br>
+  次回は秋募集予定です。まずはグループレッスンからご案内いたします。
 </p>
 
-<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=W60alH"
+<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
    target="_blank"
    class="cta-button cta-button--consult">
-  個別相談はこちら ▶︎
+  次回募集のご案内はこちら ▶︎
 </a>
 </div>
       </div>
@@ -912,19 +913,19 @@ ${nextTermBannerHtml}
        <div class="consult-box">
   <p class="consult-lead">
   エリートクラスは、<br>
-    本気で取り組みたい方だけをご案内しています。
+    プレミアムクラス修了後のステップアップクラスです。
   </p>
 
   <p class="consult-sub">
-    まずは現在の状況や目標をお伺いする<br>
-    個別相談へお越しください。
+    顔ヨガグループレッスンの受講が前提となります。<br>
+    次回は秋募集予定です。
   </p>
 </div>
 
-<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=A1ONRz"
+<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
   target="_blank"
   class="cta-button cta-button-consult">
-  個別相談はこちら ▶︎
+  次回募集のご案内はこちら ▶︎
 </a>
   </div>
 </div>
