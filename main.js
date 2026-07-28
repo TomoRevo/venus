@@ -1,9 +1,5 @@
-// 募集開始時刻（この時刻を過ぎると「申し込みはこちら」CTAのリンクが本募集用に切り替わります）
-const CTA_SWITCH_TS = new Date('2026-06-21T21:00:00+09:00').getTime();
-// 申し込みCTAのリンク：21:00前は先行案内(9ZkFVH)、21:00以降は本募集(xQQvXk)
-const ctaApplyHref = (Date.now() >= CTA_SWITCH_TS)
-  ? 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=xQQvXk'
-  : 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
+// 秋募集までは本募集フォームに進めず、次回募集の案内導線へ固定します。
+const ctaApplyHref = 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
 
 const scheduleHtml = /*html*/ `
   <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 8px;">
@@ -23,6 +19,19 @@ const nextTermBannerSmallHtml = /*html*/ `
   <div style="display:inline-block; padding:4px 16px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:10px; letter-spacing:.22em; border-radius:999px; box-shadow:0 3px 10px rgba(199,154,90,.3);">ADMISSION</div>
   <div style="font-size:12px; letter-spacing:.14em; color:#B97B86; margin:12px 0 5px;">次回募集</div>
   <div style="font-size:25px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.3;">2026年<span style="color:#B97B86;">秋</span><span style="font-size:16px; color:#6C5456;">　開始予定</span></div>
+</div>`;
+
+const courseFlowNoticeHtml = /*html*/ `
+<div style="margin:0 auto 34px; max-width:620px; background:linear-gradient(180deg,#ffffff 0%,#FCF6F2 100%); border-top:1px solid rgba(199,154,90,.34); border-bottom:1px solid rgba(199,154,90,.34); padding:24px 22px; text-align:center;">
+  <p style="font-size:12px; letter-spacing:.16em; color:#B97B86; font-weight:700; margin:0 0 10px;">受講ステップについて</p>
+  <p style="font-size:15px; line-height:1.9; color:#6C5456; font-weight:600; margin:0;">
+    プレミアムクラス・エリートクラスは、<br>
+    顔ヨガグループレッスンを受講された方のための<br>
+    ステップアップクラスです。
+  </p>
+  <p style="font-size:14px; line-height:1.8; color:#B97B86; font-weight:700; margin:14px 0 0;">
+    グループレッスンの次回募集は、2026年秋を予定しています。
+  </p>
 </div>`;
 
 document.querySelector("#app").innerHTML = /*html*/ `
@@ -540,6 +549,8 @@ ${nextTermBannerHtml}
       3つのステージで<br>基礎から応用まで徹底サポート
     </p>
 
+    ${courseFlowNoticeHtml}
+
     <div class="curriculum-path">
       <div class="course-step fade-in">
         <div class="step-badge">STAGE1</div>
@@ -635,7 +646,7 @@ ${nextTermBannerHtml}
           <a href="${ctaApplyHref}"
       target="_blank"
       class="cta-button">
-      申し込みはこちら▶︎
+      次回募集のご案内はこちら▶︎
     </a>
         </div>
       </div>
@@ -1092,7 +1103,7 @@ ${nextTermBannerHtml}
    target="_blank"
    class="cta-button"
   >
-  申し込みはこちら▶︎
+  次回募集のご案内はこちら▶︎
 </a>
 
 
@@ -1166,11 +1177,3 @@ document.addEventListener("click", (e) => {
     ></iframe>
   `;
 });
-
-// 募集開始(21:00)前にページを開いている場合、時刻になったら自動リロードしてCTAを本募集リンクに切り替える
-(() => {
-  const ms = CTA_SWITCH_TS - Date.now();
-  if (ms > 0 && ms < 2147483647) {
-    setTimeout(() => location.reload(), ms + 1500);
-  }
-})();
