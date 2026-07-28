@@ -798,11 +798,6 @@ ${nextTermBannerHtml}
   次回は秋募集予定です。まずはグループレッスンからご案内いたします。
 </p>
 
-<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
-   target="_blank"
-   class="cta-button cta-button--consult">
-  次回募集のご案内はこちら ▶︎
-</a>
 </div>
       </div>
 
@@ -899,7 +894,7 @@ ${nextTermBannerHtml}
       </div>
 
     </div>
-    <!-- ===== Elite Closing + Price + CTA ===== -->
+    <!-- ===== Elite Closing + Price + Notice ===== -->
 <div class="elite-closing">
   <p class="elite-closing-main">
     これまでに<br class="sp-only">
@@ -933,11 +928,6 @@ ${nextTermBannerHtml}
   </p>
 </div>
 
-<a href="https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH"
-  target="_blank"
-  class="cta-button cta-button-consult">
-  次回募集のご案内はこちら ▶︎
-</a>
   </div>
 </div>
 
