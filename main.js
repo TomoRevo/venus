@@ -1,24 +1,40 @@
-// 秋募集までは本募集フォームに進めず、次回募集の案内導線へ固定します。
+// 第3期生の本募集フォーム公開までは、次回募集の案内導線へ固定します（本募集開始 10/11(日)20:00）。
 const ctaApplyHref = 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
 
 const scheduleHtml = /*html*/ `
-  <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 8px;">
-    次回秋に開催予定！
+  <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 4px;">
+    10/11(日)20時～募集開始
+  </p>
+  <p style="text-align:center; color:#6C5456; font-size:15px; font-weight:700; line-height:1.8; margin:0 0 4px;">
+    ＼各クラス定員制／
+  </p>
+  <p style="text-align:center; color:#8B7355; font-size:13.5px; line-height:1.8; margin:0 0 8px;">
+    満席になり次第、受付終了となります。
   </p>`;
 
 // 次回開催のお知らせバナー（ヒーロー / 最終CTAの2箇所で使用）
 const nextTermBannerHtml = /*html*/ `
 <div class="recruit-banner" style="margin:30px auto 18px; max-width:520px; background:linear-gradient(180deg,#ffffff 0%,#FCF6F2 100%); border:1px solid rgba(199,154,90,.32); border-radius:20px; padding:26px 24px 24px; box-shadow:0 14px 34px rgba(185,123,134,.16); text-align:center;">
   <div style="display:inline-block; padding:5px 20px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:11px; letter-spacing:.24em; border-radius:999px; box-shadow:0 4px 12px rgba(199,154,90,.32);">ADMISSION</div>
-  <div style="font-size:13px; letter-spacing:.16em; color:#B97B86; margin:14px 0 6px;">次回募集</div>
-  <div style="font-size:30px; font-weight:700; line-height:1.3; font-family:'Noto Serif JP',serif; color:#6C5456;">2026年<span style="color:#B97B86;">秋</span><span style="font-size:18px; color:#6C5456;">　開始予定</span></div>
+  <div style="font-size:14px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:14px 0 4px;">新生愛されヴィーナス塾</div>
+  <div style="font-size:32px; font-weight:700; line-height:1.25; font-family:'Noto Serif JP',serif; color:#6C5456;">第<span style="color:#B97B86;">3</span>期生</div>
+  <div style="margin:16px auto 0; padding-top:14px; border-top:1px solid rgba(199,154,90,.3);">
+    <div style="font-size:22px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">10/11<span style="font-size:16px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始</div>
+    <div style="font-size:15px; font-weight:700; color:#B97B86; margin:10px 0 4px;">＼各クラス定員制／</div>
+    <div style="font-size:13px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
+  </div>
 </div>`;
 
 const nextTermBannerSmallHtml = /*html*/ `
 <div style="margin:8px auto 24px; max-width:440px; background:linear-gradient(180deg,#FCF6F2 0%,#F9EDEF 100%); border:1px solid rgba(199,154,90,.30); border-radius:18px; padding:24px 22px 22px; text-align:center;">
   <div style="display:inline-block; padding:4px 16px; background:linear-gradient(135deg,#c79a5a 0%,#dcb878 100%); color:#fff; font-size:10px; letter-spacing:.22em; border-radius:999px; box-shadow:0 3px 10px rgba(199,154,90,.3);">ADMISSION</div>
-  <div style="font-size:12px; letter-spacing:.14em; color:#B97B86; margin:12px 0 5px;">次回募集</div>
-  <div style="font-size:25px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.3;">2026年<span style="color:#B97B86;">秋</span><span style="font-size:16px; color:#6C5456;">　開始予定</span></div>
+  <div style="font-size:13px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:12px 0 4px;">新生愛されヴィーナス塾</div>
+  <div style="font-size:27px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.25;">第<span style="color:#B97B86;">3</span>期生</div>
+  <div style="margin:14px auto 0; padding-top:12px; border-top:1px solid rgba(199,154,90,.3);">
+    <div style="font-size:19px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">10/11<span style="font-size:14px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始</div>
+    <div style="font-size:14px; font-weight:700; color:#B97B86; margin:9px 0 4px;">＼各クラス定員制／</div>
+    <div style="font-size:12.5px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
+  </div>
 </div>`;
 
 const courseFlowNoticeHtml = /*html*/ `
@@ -26,11 +42,15 @@ const courseFlowNoticeHtml = /*html*/ `
   <p style="font-size:12px; letter-spacing:.16em; color:#B97B86; font-weight:700; margin:0 0 10px;">受講ステップについて</p>
   <p style="font-size:15px; line-height:1.9; color:#6C5456; font-weight:600; margin:0;">
     プレミアムクラス・エリートクラスは、<br>
-    顔ヨガグループレッスンを受講された方のための<br>
-    ステップアップクラスです。
+    顔ヨガグループレッスンを受講された方が<br>
+    <span style="color:#B97B86; font-weight:700;">どちらか一方をお選びいただく</span>クラスです。
+  </p>
+  <p style="font-size:13.5px; line-height:1.8; color:#8B7355; margin:10px 0 0;">
+    順番に受けるものではありません。<br>
+    ご自身の目指す働き方に合う方をお選びください。
   </p>
   <p style="font-size:14px; line-height:1.8; color:#B97B86; font-weight:700; margin:14px 0 0;">
-    グループレッスンの次回募集は、2026年秋を予定しています。
+    グループレッスンの次回募集は、10/11(日)20時～スタートです。
   </p>
 </div>`;
 
@@ -546,7 +566,7 @@ ${nextTermBannerHtml}
     <h2 class="section-title">カリキュラム</h2>
 
     <p class="curriculum-lead-clean">
-      3つのステージで<br>基礎から応用まで徹底サポート
+      まず土台をつくり、<br>その先は2つの道から選べます
     </p>
 
     ${courseFlowNoticeHtml}
@@ -654,11 +674,75 @@ ${nextTermBannerHtml}
     </div>
 
       <div class="step-arrow fade-in">
-          <p class="arrow-simple-text">この2ヶ月間で<br>お顔が変わり、自信が戻り<br>「この経験を活かしたい」と思った方には<br>次のステージをご用意しています。<br><br>▼</p>
+          <p class="arrow-simple-text">この2ヶ月間で<br>お顔が変わり、自信が戻り<br>「この経験を活かしたい」と思った方へ。<br>ここから先は、<br>2つの道からお選びいただけます。<br><br>▼</p>
         </div>
 
-        <div class="course-step fade-in">
-          <div class="step-badge step-badge-advanced">STAGE 2</div>
+      <!-- =========================
+        STAGE2 分岐：2つから選ぶ
+      ========================== -->
+      <div class="choice-branch fade-in">
+        <div class="choice-branch-head">
+          <div class="choice-branch-badge">STAGE2</div>
+          <h3 class="choice-branch-title">2つの道から、<br class="sp-only">どちらか一方をお選びください</h3>
+          <p class="choice-branch-sub">
+            どちらも顔ヨガグループレッスン修了後に進めるクラスです。<br>
+            順番に受けるものではありません。
+          </p>
+        </div>
+
+        <div class="choice-grid">
+          <button type="button" class="choice-card choice-card-premium" data-open="class-premium" aria-expanded="false" aria-controls="panel-premium">
+            <div class="choice-card-label">PREMIUM</div>
+            <h4 class="choice-card-name">プレミアムクラス</h4>
+            <p class="choice-card-catch">顔ヨガを<br><strong>&ldquo;自分らしい働き方&rdquo;</strong>に変える</p>
+
+            <dl class="choice-spec">
+              <div><dt>期間</dt><dd>4ヶ月 / 全12回</dd></div>
+              <div><dt>定員</dt><dd>少人数グループ制</dd></div>
+              <div><dt>受講料</dt><dd><span class="choice-price">350,000</span>円（税込）</dd></div>
+            </dl>
+
+            <p class="choice-for-label">こんな方に</p>
+            <ul class="choice-for-list">
+              <li>まず顔ヨガを仕事にしたい</li>
+              <li>発信や集客の型を身につけたい</li>
+              <li>安定して申込みが入る形を作りたい</li>
+            </ul>
+
+            <p class="choice-point">ディプロマ発行あり</p>
+            <span class="choice-more"><span class="choice-more-label">詳しく見る</span><span class="choice-chevron" aria-hidden="true"></span></span>
+          </button>
+
+          <div class="choice-or" aria-hidden="true"><span>または</span></div>
+
+          <button type="button" class="choice-card choice-card-elite" data-open="class-elite" aria-expanded="false" aria-controls="panel-elite">
+            <div class="choice-card-label">ELITE</div>
+            <h4 class="choice-card-name">エリートクラス</h4>
+            <p class="choice-card-catch">顔ヨガを<br><strong>&ldquo;人生の柱&rdquo;</strong>にする</p>
+
+            <dl class="choice-spec">
+              <div><dt>期間</dt><dd>6ヶ月</dd></div>
+              <div><dt>定員</dt><dd>3名限定</dd></div>
+              <div><dt>受講料</dt><dd><span class="choice-price">500,000</span>円（税込）</dd></div>
+            </dl>
+
+            <p class="choice-for-label">こんな方に</p>
+            <ul class="choice-for-list">
+              <li>さらに売上を伸ばしたい</li>
+              <li>仕事として確立させたい</li>
+              <li>自分らしいブランドを築きたい</li>
+            </ul>
+
+            <p class="choice-point">個別コンサル付き</p>
+            <span class="choice-more"><span class="choice-more-label">詳しく見る</span><span class="choice-chevron" aria-hidden="true"></span></span>
+          </button>
+        </div>
+      </div>
+
+        <div class="course-step course-accordion" id="class-premium">
+          <div class="acc-panel" id="panel-premium">
+          <div class="acc-panel-inner">
+          <div class="step-badge step-badge-advanced">STAGE2 ｜ PREMIUM</div>
           <div class="course-main-card course-main-card-advanced">
           
 
@@ -686,7 +770,7 @@ ${nextTermBannerHtml}
              <div class="course-description-box">
             <p>
               顔ヨガを仕事にするための4ヶ月間の実践講座
-              <br>※STAGE1受講者のみ参加可能
+              <br>※顔ヨガグループレッスン修了者が選べる2つの道のうちの1つ
             </p>
           </div>
 
@@ -794,23 +878,23 @@ ${nextTermBannerHtml}
 </div>
 
 <p class="elite-consult-text">
-  プレミアムクラスは、顔ヨガグループレッスン受講後のステップアップクラスです。<br>
-  次回は秋募集予定です。まずはグループレッスンからご案内いたします。
+  プレミアムクラスは、顔ヨガグループレッスン修了後に<strong>エリートクラスと並んで選べる</strong>クラスです。<br>
+  次回募集は10/11(日)20時～スタートです。まずはグループレッスンからご案内いたします。
 </p>
 
 </div>
+          <button type="button" class="acc-close" data-close="class-premium">閉じる<span class="acc-close-chevron" aria-hidden="true"></span></button>
+          </div>
+          </div>
       </div>
-
-        <div class="step-arrow fade-in">
-          <p class="arrow-simple-text">自分が綺麗になった経験とスキルを使って<br>自分らしい働き方を確立したい方へ<br>トータルサポートプランもご用意しています。<br><br>▼</p>
-        </div>
 
        <!-- =========================
   ③ 愛されヴィーナスエリートクラス
 ========================== -->
-<div class="course-step fade-in">
-  <div class="step-badge step-badge-elite">STAGE 3</div>
-
+<div class="course-step course-accordion" id="class-elite">
+  <div class="acc-panel" id="panel-elite">
+  <div class="acc-panel-inner">
+  <div class="step-badge step-badge-elite">STAGE2 ｜ ELITE</div>
   <div class="course-main-card course-main-card-elite">
 
 
@@ -823,7 +907,7 @@ ${nextTermBannerHtml}
 </div>
         <p class="course-period course-period-elite">6ヶ月間で自分らしい働き方を確立</p>
         <p class="course-req">※3名限定</p>
-        <p class="course-req">※プレミアムクラス修了者対象</p>
+        <p class="course-req">※顔ヨガグループレッスン修了者が選べる2つの道のうちの1つ</p>
       </div>
     </div>
 
@@ -867,7 +951,6 @@ ${nextTermBannerHtml}
             <li>認定講師月1回 個別フォロー（6回）</li>
             <li>グループコンサル月2回（計12回）</li>
             <li>チャット相談 無制限</li>
-            <li>憧れられるブランディング撮影付き</li>
             <li>ヴィーナス塾生合宿優先参加枠</li>
           </ul>
         </span>
@@ -891,9 +974,7 @@ ${nextTermBannerHtml}
 
     </div>
   </div>
-      </div>
 
-    </div>
     <!-- ===== Elite Closing + Price + Notice ===== -->
 <div class="elite-closing">
   <p class="elite-closing-main">
@@ -919,19 +1000,23 @@ ${nextTermBannerHtml}
        <div class="consult-box">
   <p class="consult-lead">
   エリートクラスは、<br>
-    プレミアムクラス修了後のステップアップクラスです。
+    顔ヨガグループレッスン修了後に<br>
+    プレミアムクラスと並んで選べるクラスです。
   </p>
 
   <p class="consult-sub">
     顔ヨガグループレッスンの受講が前提となります。<br>
-    次回は秋募集予定です。
+    プレミアムクラスの修了は条件ではありません。<br>
+    次回募集は10/11(日)20時～スタートです。
   </p>
 </div>
 
   </div>
+  <button type="button" class="acc-close" data-close="class-elite">閉じる<span class="acc-close-chevron" aria-hidden="true"></span></button>
+  </div>
 </div>
 
-
+    </div>
   </div>
 </section>
 
@@ -1167,3 +1252,81 @@ document.addEventListener("click", (e) => {
     ></iframe>
   `;
 });
+
+/* =========================================================
+   STAGE2：上の比較カードをそのまま開閉ボタンにする
+   （2026-09-06 CEO指示：カードと見出しで同じ内容が2度出るのをやめる）
+   ・カードをクリック → 対応するクラスの詳細が開く
+   ・開けるのは常にどちらか一方（「どちらか選ぶ」を体験でも表す）
+========================================================= */
+(() => {
+  const accordions = [...document.querySelectorAll(".course-accordion")];
+  const cards = [...document.querySelectorAll(".choice-card[data-open]")];
+  if (!accordions.length || !cards.length) return;
+
+  const cardFor = (id) => cards.find((c) => c.dataset.open === id);
+
+  const setOpen = (acc, open) => {
+    const card = cardFor(acc.id);
+    const label = card && card.querySelector(".choice-more-label");
+
+    acc.classList.toggle("is-open", open);
+    if (!open) acc.classList.remove("is-open-done");
+
+    if (card) {
+      card.classList.toggle("is-active", open);
+      card.setAttribute("aria-expanded", String(open));
+    }
+    if (label) label.textContent = open ? "閉じる" : "詳しく見る";
+  };
+
+  // 開けるのは一方だけ。もう片方は閉じる
+  const openOnly = (acc) => accordions.forEach((a) => setOpen(a, a === acc));
+
+  const scrollToAcc = (acc) => {
+    requestAnimationFrame(() => {
+      const top = acc.getBoundingClientRect().top + window.pageYOffset - 20;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const acc = document.getElementById(card.dataset.open);
+      if (!acc) return;
+      const willOpen = !acc.classList.contains("is-open");
+      if (willOpen) {
+        openOnly(acc);
+        scrollToAcc(acc);
+      } else {
+        setOpen(acc, false);
+      }
+    });
+  });
+
+  // 詳細の末尾「閉じる」→ 閉じて、選択カードまで戻す
+  document.querySelectorAll(".acc-close[data-close]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const acc = document.getElementById(btn.dataset.close);
+      if (!acc) return;
+      setOpen(acc, false);
+      const grid = document.querySelector(".choice-grid");
+      if (grid) {
+        window.scrollTo({
+          top: grid.getBoundingClientRect().top + window.pageYOffset - 30,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  // 開き切ってから影・装飾枠がはみ出せるようにする
+  accordions.forEach((acc) => {
+    const panel = acc.querySelector(".acc-panel");
+    if (!panel) return;
+    panel.addEventListener("transitionend", (e) => {
+      if (e.propertyName !== "grid-template-rows") return;
+      if (acc.classList.contains("is-open")) acc.classList.add("is-open-done");
+    });
+  });
+})();

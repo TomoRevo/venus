@@ -3846,3 +3846,606 @@ body {
     font-size: 14.5px;
   }
 }
+/* =========================================================
+   STAGE2 分岐：プレミアム / エリートを「どちらか選ぶ」見せ方
+   （2026-09-06 めぐさん依頼：直列 STAGE2→3 を並列の選択へ）
+========================================================= */
+
+.choice-branch {
+  margin: 0 auto 10px;
+  width: 100%;
+}
+
+.choice-branch-head {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.choice-branch-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-white);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 15px rgba(212, 143, 143, 0.35);
+}
+
+.choice-branch-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-brown);
+  line-height: 1.6;
+  margin: 18px 0 10px;
+}
+
+.choice-branch-sub {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #8B7355;
+  margin: 0;
+}
+
+/* --- 2択グリッド --- */
+.choice-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 28px 22px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice-card-premium {
+  border: 3px solid var(--color-accent);
+  background: linear-gradient(135deg, #fff9f5 0%, #fef5ef 100%);
+  box-shadow: 0 10px 30px rgba(185, 123, 134, 0.16);
+}
+
+.choice-card-elite {
+  border: 3px solid rgba(212, 165, 116, 0.65);
+  background: linear-gradient(135deg, #ffffff 0%, #FCF6F2 100%);
+  box-shadow: 0 10px 30px rgba(199, 154, 90, 0.18);
+}
+
+.choice-card:hover,
+.choice-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(139, 111, 71, 0.22);
+}
+
+.choice-card-label {
+  align-self: center;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  color: var(--color-white);
+  padding: 5px 18px;
+  border-radius: 999px;
+}
+
+.choice-card-premium .choice-card-label {
+  background: linear-gradient(135deg, #e8a87c, #d48f8f);
+}
+
+.choice-card-elite .choice-card-label {
+  background: linear-gradient(135deg, #C89B6F, #d4a574, #B97B86);
+}
+
+.choice-card-name {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--color-brown);
+  line-height: 1.5;
+  margin: 14px 0 8px;
+}
+
+.choice-card-catch {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #8B7355;
+  margin: 0 0 18px;
+}
+
+.choice-card-catch strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* --- スペック --- */
+.choice-spec {
+  margin: 0 0 18px;
+  border-top: 1px solid rgba(199, 154, 90, 0.28);
+}
+
+.choice-spec > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 4px;
+  border-bottom: 1px solid rgba(199, 154, 90, 0.28);
+}
+
+.choice-spec dt {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #B97B86;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.choice-spec dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-brown);
+  text-align: right;
+}
+
+.choice-price {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  color: var(--color-accent);
+}
+
+/* --- こんな方に --- */
+.choice-for-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #B97B86;
+  margin: 0 0 8px;
+}
+
+.choice-for-list {
+  list-style: none;
+  text-align: left;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.choice-for-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.choice-for-list li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  top: 0.38em;
+  color: var(--color-accent);
+  font-size: 8.5px;
+  line-height: 1;
+}
+
+.choice-point {
+  margin: auto 0 14px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #8b6f47;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.16), rgba(255, 237, 78, 0.22));
+}
+
+.choice-more {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+}
+
+/* --- 「または」（グリッド中央の縦区切り） --- */
+.choice-or {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.choice-or::before,
+.choice-or::after {
+  content: "";
+  flex: 1;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(199, 154, 90, 0), rgba(199, 154, 90, 0.5));
+}
+
+.choice-or::after {
+  background: linear-gradient(180deg, rgba(199, 154, 90, 0.5), rgba(199, 154, 90, 0));
+}
+
+.choice-or span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #B97B86;
+  background: var(--color-white);
+  border: 1px solid rgba(199, 154, 90, 0.4);
+  border-radius: 999px;
+  padding: 8px 6px;
+  writing-mode: vertical-rl;
+  letter-spacing: 0.16em;
+}
+
+/* --- 詳細カード間の「または」区切り（横） --- */
+.course-or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 44px 20px;
+}
+
+.course-or-line {
+  flex: 1;
+  max-width: 160px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(199, 154, 90, 0), rgba(199, 154, 90, 0.55));
+}
+
+.course-or-line:last-child {
+  background: linear-gradient(90deg, rgba(199, 154, 90, 0.55), rgba(199, 154, 90, 0));
+}
+
+.course-or-word {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: #B97B86;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+  border: 1px solid rgba(199, 154, 90, 0.4);
+  border-radius: 999px;
+  padding: 8px 22px;
+  background: var(--color-white);
+}
+
+/* --- アンカー着地位置の調整 --- */
+#class-premium,
+#class-elite {
+  scroll-margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .choice-branch-title {
+    font-size: 20px;
+  }
+
+  .choice-branch-sub {
+    font-size: 13px;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .choice-card {
+    padding: 24px 18px 22px;
+  }
+
+  .choice-or {
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .choice-or::before,
+  .choice-or::after {
+    width: auto;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(199, 154, 90, 0), rgba(199, 154, 90, 0.5));
+  }
+
+  .choice-or::after {
+    background: linear-gradient(90deg, rgba(199, 154, 90, 0.5), rgba(199, 154, 90, 0));
+  }
+
+  .choice-or span {
+    writing-mode: horizontal-tb;
+    padding: 6px 16px;
+  }
+
+  .course-or-divider {
+    padding: 32px 12px;
+  }
+
+  .course-or-word {
+    font-size: 14px;
+    padding: 7px 18px;
+  }
+}
+
+/* =========================================================
+   STAGE2 アコーディオン（プレミアム / エリート）
+   （2026-09-06 CEO指示：選んだ方だけ開いて読める形に）
+========================================================= */
+
+.course-accordion {
+  width: 100%;
+}
+
+/* --- 見出し（クリックで開閉） --- */
+.acc-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #FCF6F2 100%);
+  border: 2px solid rgba(199, 154, 90, 0.34);
+  border-radius: 24px;
+  padding: 22px 24px 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.acc-head:hover,
+.acc-head:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(139, 111, 71, 0.16);
+}
+
+.acc-head-premium {
+  border-color: rgba(185, 123, 134, 0.45);
+  background: linear-gradient(180deg, #ffffff 0%, #fef5ef 100%);
+}
+
+.acc-head-elite {
+  border-color: rgba(212, 165, 116, 0.55);
+}
+
+/* 見出し内のバッジは既存デザインを流用しつつ余白だけ調整 */
+.acc-head .step-badge {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.acc-head-title {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--color-brown);
+  line-height: 1.5;
+}
+
+.acc-head-meta {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #8B7355;
+  letter-spacing: 0.04em;
+}
+
+.acc-head-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 22px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid rgba(199, 154, 90, 0.4);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+}
+
+.acc-chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.35s ease;
+}
+
+.course-accordion.is-open .acc-chevron {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+/* --- パネル（高さアニメーション） --- */
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s ease;
+}
+
+.course-accordion.is-open .acc-panel {
+  grid-template-rows: 1fr;
+}
+
+.acc-panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 開き切ったら、カードの影・メタリック枠がはみ出せるようにする */
+.course-accordion.is-open-done .acc-panel-inner {
+  overflow: visible;
+}
+
+.course-accordion.is-open .acc-panel-inner > .course-main-card {
+  margin-top: 18px;
+}
+
+/* 閉じている時に下の要素とくっつかないように */
+.course-accordion + .course-or-divider {
+  padding-top: 34px;
+}
+
+/* --- 選択カードを button 化したことによるリセット --- */
+button.choice-card {
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (max-width: 768px) {
+  .acc-head {
+    padding: 20px 16px 18px;
+    border-radius: 20px;
+  }
+
+  .acc-head-title {
+    font-size: 18px;
+  }
+
+  .acc-head-meta {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .acc-head-action {
+    font-size: 12.5px;
+    padding: 7px 18px;
+  }
+}
+
+
+/* =========================================================
+   STAGE2：比較カード＝開閉ボタン（見出しの重複を廃止）
+   （2026-09-06 CEO指示）
+========================================================= */
+
+/* --- カードの「詳しく見る／閉じる」 --- */
+.choice-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 2px;
+  padding: 9px 22px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid rgba(199, 154, 90, 0.45);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.06em;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.choice-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.35s ease;
+}
+
+/* 開いているカード */
+.choice-card.is-active {
+  box-shadow: 0 16px 38px rgba(139, 111, 71, 0.24);
+}
+
+.choice-card-premium.is-active {
+  border-color: var(--color-accent);
+}
+
+.choice-card-elite.is-active {
+  border-color: rgba(199, 154, 90, 0.95);
+}
+
+.choice-card.is-active .choice-more {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.choice-card-elite.is-active .choice-more {
+  background: linear-gradient(135deg, #C89B6F, #d4a574);
+  border-color: rgba(199, 154, 90, 0.9);
+  color: var(--color-white);
+}
+
+.choice-card.is-active .choice-chevron {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+/* --- パネル内のバッジ（見出し代わり） --- */
+.acc-panel-inner > .step-badge {
+  margin-top: 26px;
+  margin-bottom: 18px;
+}
+
+/* --- 詳細の末尾「閉じる」 --- */
+.acc-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 26px auto 8px;
+  padding: 12px 34px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  background: var(--color-white);
+  border: 1px solid rgba(199, 154, 90, 0.45);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.acc-close:hover,
+.acc-close:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.acc-close-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+/* 閉じている時は下の実績セクションと詰めすぎない */
+.course-accordion + .course-accordion .acc-panel-inner > .step-badge {
+  margin-top: 26px;
+}
+
+@media (max-width: 768px) {
+  .choice-more {
+    font-size: 12.5px;
+    padding: 8px 18px;
+  }
+
+  .acc-close {
+    padding: 11px 28px;
+    font-size: 13px;
+  }
+}
