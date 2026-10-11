@@ -1,9 +1,46 @@
-// 第3期生の本募集フォーム公開までは、次回募集の案内導線へ固定します（本募集開始 10/11(日)20:00）。
-const ctaApplyHref = 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
+// 募集開始時刻（この時刻を過ぎると申込CTAが本募集フォームに切り替わり、表記が「募集中」になります）
+const CTA_SWITCH_TS = new Date('2026-10-11T20:00:00+09:00').getTime();
+// 第3期生 本募集フォームのリンク（空のあいだは20:00を過ぎても次回募集の案内導線のまま）
+const APPLY_OPEN_HREF = '';
+const isRecruiting = APPLY_OPEN_HREF !== '' && Date.now() >= CTA_SWITCH_TS;
+const ctaApplyHref = isRecruiting
+  ? APPLY_OPEN_HREF
+  : 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
+const ctaApplyLabel = isRecruiting ? '申し込みはこちら▶︎' : '次回募集のご案内はこちら▶︎';
+const groupRecruitText = isRecruiting
+  ? 'グループレッスンは、ただいま募集中です。'
+  : '次回募集は10/11(日)20時～スタートです。';
 
 const scheduleHtml = /*html*/ `
+  <p style="text-align:center; color:#B97B86; font-size:13px; margin:4px 0 14px;">各クラス 全6回・どちらかをお選びいただけます</p>
+
+  <div class="schedule-columns">
+    <div class="schedule-column">
+      <h5>平日クラス　21:00〜22:30</h5>
+      <ul class="schedule-dates">
+        <li>① 11月9日（月）</li>
+        <li>② 11月19日（木）</li>
+        <li>③ 11月27日（金）</li>
+        <li>④ 12月3日（木）</li>
+        <li>⑤ 12月11日（金）</li>
+        <li>⑥ 12月21日（月）</li>
+      </ul>
+    </div>
+    <div class="schedule-column">
+      <h5>土日クラス　10:00〜11:30</h5>
+      <ul class="schedule-dates">
+        <li>① 11月8日（日）</li>
+        <li>② 11月14日（土）</li>
+        <li>③ 11月29日（日）</li>
+        <li>④ 12月5日（土）</li>
+        <li>⑤ 12月13日（日）</li>
+        <li>⑥ 12月20日（日）</li>
+      </ul>
+    </div>
+  </div>
+
   <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 4px;">
-    10/11(日)20時～募集開始
+    ${isRecruiting ? 'ただいま募集中！' : '10/11(日)20時～募集開始'}
   </p>
   <p style="text-align:center; color:#6C5456; font-size:15px; font-weight:700; line-height:1.8; margin:0 0 4px;">
     ＼各クラス定員制／
@@ -19,7 +56,7 @@ const nextTermBannerHtml = /*html*/ `
   <div style="font-size:14px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:14px 0 4px;">新生愛されヴィーナス塾</div>
   <div style="font-size:32px; font-weight:700; line-height:1.25; font-family:'Noto Serif JP',serif; color:#6C5456;">第<span style="color:#B97B86;">3</span>期生</div>
   <div style="margin:16px auto 0; padding-top:14px; border-top:1px solid rgba(199,154,90,.3);">
-    <div style="font-size:22px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">10/11<span style="font-size:16px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始</div>
+    <div style="font-size:22px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:16px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
     <div style="font-size:15px; font-weight:700; color:#B97B86; margin:10px 0 4px;">＼各クラス定員制／</div>
     <div style="font-size:13px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
   </div>
@@ -31,7 +68,7 @@ const nextTermBannerSmallHtml = /*html*/ `
   <div style="font-size:13px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:12px 0 4px;">新生愛されヴィーナス塾</div>
   <div style="font-size:27px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.25;">第<span style="color:#B97B86;">3</span>期生</div>
   <div style="margin:14px auto 0; padding-top:12px; border-top:1px solid rgba(199,154,90,.3);">
-    <div style="font-size:19px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">10/11<span style="font-size:14px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始</div>
+    <div style="font-size:19px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:14px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
     <div style="font-size:14px; font-weight:700; color:#B97B86; margin:9px 0 4px;">＼各クラス定員制／</div>
     <div style="font-size:12.5px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
   </div>
@@ -50,7 +87,7 @@ const courseFlowNoticeHtml = /*html*/ `
     ご自身の目指す働き方に合う方をお選びください。
   </p>
   <p style="font-size:14px; line-height:1.8; color:#B97B86; font-weight:700; margin:14px 0 0;">
-    グループレッスンの次回募集は、10/11(日)20時～スタートです。
+    ${isRecruiting ? 'グループレッスンは、ただいま募集中です。' : 'グループレッスンの次回募集は、10/11(日)20時～スタートです。'}
   </p>
 </div>`;
 
@@ -666,7 +703,7 @@ ${nextTermBannerHtml}
           <a href="${ctaApplyHref}"
       target="_blank"
       class="cta-button">
-      次回募集のご案内はこちら▶︎
+      ${ctaApplyLabel}
     </a>
         </div>
       </div>
@@ -879,7 +916,7 @@ ${nextTermBannerHtml}
 
 <p class="elite-consult-text">
   プレミアムクラスは、顔ヨガグループレッスン修了後に<strong>エリートクラスと並んで選べる</strong>クラスです。<br>
-  次回募集は10/11(日)20時～スタートです。まずはグループレッスンからご案内いたします。
+  ${groupRecruitText}まずはグループレッスンからご案内いたします。
 </p>
 
 </div>
@@ -1007,7 +1044,7 @@ ${nextTermBannerHtml}
   <p class="consult-sub">
     顔ヨガグループレッスンの受講が前提となります。<br>
     プレミアムクラスの修了は条件ではありません。<br>
-    次回募集は10/11(日)20時～スタートです。
+    ${groupRecruitText}
   </p>
 </div>
 
@@ -1178,7 +1215,7 @@ ${nextTermBannerHtml}
    target="_blank"
    class="cta-button"
   >
-  次回募集のご案内はこちら▶︎
+  ${ctaApplyLabel}
 </a>
 
 
@@ -1329,4 +1366,12 @@ document.addEventListener("click", (e) => {
       if (acc.classList.contains("is-open")) acc.classList.add("is-open-done");
     });
   });
+})();
+
+// 募集開始(20:00)前にページを開いている場合、時刻になったら自動リロードしてCTAを本募集リンクに切り替える
+(() => {
+  const ms = CTA_SWITCH_TS - Date.now();
+  if (APPLY_OPEN_HREF !== '' && ms > 0 && ms < 2147483647) {
+    setTimeout(() => location.reload(), ms + 1500);
+  }
 })();
