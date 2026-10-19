@@ -2,14 +2,21 @@
 const CTA_SWITCH_TS = new Date('2026-10-11T20:00:00+09:00').getTime();
 // 第3期生 本募集フォームのリンク（空のあいだは20:00を過ぎても次回募集の案内導線のまま）
 const APPLY_OPEN_HREF = 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=MZnIb3';
-const isRecruiting = APPLY_OPEN_HREF !== '' && Date.now() >= CTA_SWITCH_TS;
+// 第3期生の募集を締め切ったら true（申込CTAは次回募集のご案内に戻り、表記が「募集終了」になります）
+const RECRUIT_CLOSED = true;
+const isRecruiting = !RECRUIT_CLOSED && APPLY_OPEN_HREF !== '' && Date.now() >= CTA_SWITCH_TS;
 const ctaApplyHref = isRecruiting
   ? APPLY_OPEN_HREF
   : 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=9ZkFVH';
 const ctaApplyLabel = isRecruiting ? '申し込みはこちら▶︎' : '次回募集のご案内はこちら▶︎';
-const groupRecruitText = isRecruiting
-  ? 'グループレッスンは、ただいま募集中です。'
-  : '次回募集は10/11(日)20時～スタートです。';
+const groupRecruitText = RECRUIT_CLOSED
+  ? 'グループレッスン第3期生の募集は終了しました。'
+  : isRecruiting
+    ? 'グループレッスンは、ただいま募集中です。'
+    : '次回募集は10/11(日)20時～スタートです。';
+// バナー・開講日程欄の「定員制／満席になり次第…」の下段（募集終了後は次回のご案内に差し替え）
+const recruitNoteBig = RECRUIT_CLOSED ? '次回募集は公式LINEでご案内します' : '＼各クラス定員制／';
+const recruitNoteSmall = RECRUIT_CLOSED ? '' : '満席になり次第、受付終了となります。';
 
 const scheduleHtml = /*html*/ `
   <p style="text-align:center; color:#B97B86; font-size:13px; margin:4px 0 14px;">各クラス 全6回・どちらかをお選びいただけます</p>
@@ -40,13 +47,13 @@ const scheduleHtml = /*html*/ `
   </div>
 
   <p style="text-align:center; color:#B97B86; font-size:18px; font-weight:700; line-height:1.8; margin:16px 0 4px;">
-    ${isRecruiting ? 'ただいま募集中！' : '10/11(日)20時～募集開始'}
+    ${RECRUIT_CLOSED ? '第3期生の募集は終了しました' : isRecruiting ? 'ただいま募集中！' : '10/11(日)20時～募集開始'}
   </p>
   <p style="text-align:center; color:#6C5456; font-size:15px; font-weight:700; line-height:1.8; margin:0 0 4px;">
-    ＼各クラス定員制／
+    ${recruitNoteBig}
   </p>
   <p style="text-align:center; color:#8B7355; font-size:13.5px; line-height:1.8; margin:0 0 8px;">
-    満席になり次第、受付終了となります。
+    ${recruitNoteSmall}
   </p>`;
 
 // 次回開催のお知らせバナー（ヒーロー / 最終CTAの2箇所で使用）
@@ -56,9 +63,9 @@ const nextTermBannerHtml = /*html*/ `
   <div style="font-size:14px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:14px 0 4px;">新生愛されヴィーナス塾</div>
   <div style="font-size:32px; font-weight:700; line-height:1.25; font-family:'Noto Serif JP',serif; color:#6C5456;">第<span style="color:#B97B86;">3</span>期生</div>
   <div style="margin:16px auto 0; padding-top:14px; border-top:1px solid rgba(199,154,90,.3);">
-    <div style="font-size:22px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:16px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
-    <div style="font-size:15px; font-weight:700; color:#B97B86; margin:10px 0 4px;">＼各クラス定員制／</div>
-    <div style="font-size:13px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
+    <div style="font-size:22px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${RECRUIT_CLOSED ? '募集は終了しました' : isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:16px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
+    <div style="font-size:15px; font-weight:700; color:#B97B86; margin:10px 0 4px;">${recruitNoteBig}</div>
+    <div style="font-size:13px; color:#8B7355; line-height:1.7;">${recruitNoteSmall}</div>
   </div>
 </div>`;
 
@@ -68,9 +75,9 @@ const nextTermBannerSmallHtml = /*html*/ `
   <div style="font-size:13px; letter-spacing:.12em; color:#B97B86; font-weight:700; margin:12px 0 4px;">新生愛されヴィーナス塾</div>
   <div style="font-size:27px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.25;">第<span style="color:#B97B86;">3</span>期生</div>
   <div style="margin:14px auto 0; padding-top:12px; border-top:1px solid rgba(199,154,90,.3);">
-    <div style="font-size:19px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:14px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
-    <div style="font-size:14px; font-weight:700; color:#B97B86; margin:9px 0 4px;">＼各クラス定員制／</div>
-    <div style="font-size:12.5px; color:#8B7355; line-height:1.7;">満席になり次第、受付終了となります。</div>
+    <div style="font-size:19px; font-weight:700; font-family:'Noto Serif JP',serif; color:#6C5456; line-height:1.4;">${RECRUIT_CLOSED ? '募集は終了しました' : isRecruiting ? '募集中<span style="color:#B97B86;">！</span>' : '10/11<span style="font-size:14px;">(日)</span><span style="color:#B97B86;">20時</span>～募集開始'}</div>
+    <div style="font-size:14px; font-weight:700; color:#B97B86; margin:9px 0 4px;">${recruitNoteBig}</div>
+    <div style="font-size:12.5px; color:#8B7355; line-height:1.7;">${recruitNoteSmall}</div>
   </div>
 </div>`;
 
@@ -87,7 +94,7 @@ const courseFlowNoticeHtml = /*html*/ `
     ご自身の目指す働き方に合う方をお選びください。
   </p>
   <p style="font-size:14px; line-height:1.8; color:#B97B86; font-weight:700; margin:14px 0 0;">
-    ${isRecruiting ? 'グループレッスンは、ただいま募集中です。' : 'グループレッスンの次回募集は、10/11(日)20時～スタートです。'}
+    ${RECRUIT_CLOSED ? 'グループレッスン第3期生の募集は終了しました。' : isRecruiting ? 'グループレッスンは、ただいま募集中です。' : 'グループレッスンの次回募集は、10/11(日)20時～スタートです。'}
   </p>
 </div>`;
 
