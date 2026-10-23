@@ -3,7 +3,7 @@ const CTA_SWITCH_TS = new Date('2026-10-11T20:00:00+09:00').getTime();
 // 第3期生 本募集フォームのリンク（空のあいだは20:00を過ぎても次回募集の案内導線のまま）
 const APPLY_OPEN_HREF = 'https://s.lmes.jp/landing-qr/1657280453-eKjLAxd7?uLand=MZnIb3';
 // 第3期生の募集を締め切ったら true（申込CTAは次回募集のご案内に戻り、表記が「募集終了」になります）
-const RECRUIT_CLOSED = true;
+const RECRUIT_CLOSED = false;
 const isRecruiting = !RECRUIT_CLOSED && APPLY_OPEN_HREF !== '' && Date.now() >= CTA_SWITCH_TS;
 const ctaApplyHref = isRecruiting
   ? APPLY_OPEN_HREF
